@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的钱包</title>
+		<link rel="stylesheet" href="../../css/plugin/reset.css">
+		<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+		<script src="../../js/plugin/layui/layui.js"></script>
+		<script src="../../js/lib/jquery.min.js"></script>
+		<link rel="stylesheet" href="../../css/myMoney/money.css" />
+	</head>
+
+	<body>
+		<!-- 头部 -->
+		<div class="header">
+			<script type="text/javascript">
+				$(".header").load("../common/header.html");
+			</script>
+		</div>
+		<!--用户信息-->
+		<div class="userInfo">
+			<div class="head">
+				<div class="left">
+					<img src="../../images/wx-bg.png" />
+					<div>账户积分余额：<span>300</span></div>
+				</div>
+				<div class="rig">
+					<button>立即充值</button>
+					<button>提现</button>
+				</div>
+			</div>
+		</div>
+		<!--充值记录  订单记录-->
+		<div class="warp">
+			<div class="layui-tab">
+				<ul class="layui-tab-title">
+					<li class="layui-this">充值记录</li>
+					<li>订单记录</li>
+				</ul>
+				<div class="layui-tab-content">
+					<!----充值记录---->
+					<div class="layui-tab-item layui-show">
+						<table class="layui-table">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>充值时间</th>
+									<th>充值账户</th>
+									<th>充值方式</th>
+									<th>到账金额</th>
+									<th>充值订单号</th>
+									<th>状态</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>12</td>
+									<td>2016/11/29
+										<-2019/01/01</td>
+											<td>423423234</td>
+											<td>扫码支付</td>
+											<td>222</td>
+											<td>33132131231</td>
+											<td>已完成</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div id="demo0"></div>
+					</div>
+					<!----订单记录---->
+					<div class="layui-tab-item">
+						<table class="layui-table">
+							<thead>
+								<tr>
+									<th>订单号</th>
+									<th>产品</th>
+									<th>订单时间</th>
+									<th>奖品总数</th>
+									<th>积分总额</th>
+									<th>订单状态</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>322434543543211122</td>
+									<td>
+										<p>爱奇艺会员*3</p>
+										<p>芒果会员*3</p>
+										<p>MAC口红*1</p>
+									</td>
+									<td>2018/12/30</td>
+									<td>7</td>
+									<td>800</td>
+									<td>已支付</td>
+									<td>
+										<a href="../Moneyorder/index.html">查看详情</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div id="demo1"></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	layui.use('element', function() {
+		var element = layui.element;
+	});
+
+	layui.use('laypage', function() {
+		var laypage = layui.laypage;
+
+		laypage.render({
+			elem: 'demo0',
+			count: 50 //数据总数，从服务端得到
+			
+		});
+		
+		
+		laypage.render({
+			elem: 'demo1',
+			count: 50 //数据总数，从服务端得到
+			
+		});
+	});
+</script>

@@ -1,0 +1,240 @@
+.viewData_app {
+		width: 100%;
+		min-height: 100vh;
+		background: #F8F8F8;
+	}
+	.width100{
+		width: 100%;
+		background: #fff;
+	}
+	.viewData {
+		/* width: 1200px; */
+		margin: 20px auto;
+		background-color: #fff;
+		box-shadow:0px 2px 5px 0px rgba(214,214,214,0.45);
+	}
+	.conter1200{
+		margin: 15px 360px 15px 210px;
+	}
+	.view_nav_box {
+		display: flex;
+		align-items: center;
+		height: 196px;
+	}
+
+	.view_nav {
+		margin-right: 140px;
+		/*width: 15%;*/
+	}
+
+	.view_nav_top {
+		text-align: center;
+		font-size: 20px;
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		color: rgba(76, 76, 76, 1);
+		margin-bottom: 12px;
+	}
+
+	.view_nav_bott {
+		width: 60px;
+		height: 26px;
+		font-size: 14px;
+		text-align: center;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(92, 145, 255, 1);
+		line-height: 26px;
+		margin: 0 auto;
+		border-radius: 3px;
+		border: 1px solid rgba(92, 145, 255, 1);
+	}
+
+	ul li {
+		list-style-type: none;
+	}
+
+	.view_nav_list {
+		width: 80%;
+		display: flex;
+		padding: 0!important;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.view_nav_list img {
+		width: 130px;
+		height: 130px;
+		/*display: none;*/
+		background: saddlebrown;
+	}
+
+	.view_nav_list_num {
+		text-align: center;
+		font-size: 34px;
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
+		margin-bottom: 10px;
+	}
+
+	.view_nav_list_text {
+		text-align: center;
+		font-size: 14px;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(175, 175, 175, 1);
+	}
+
+	.viewData_teb_data {
+		display: none;
+		/* display: flex; */
+		align-items: center;
+		padding: 24px 0;
+		border-bottom: 1px solid #DBDFE6;
+	}
+
+	.viewData_teb_data ul {
+		display: flex;
+		width: 367px;
+		height: 30px;
+		border: 1px solid #DBDFE6;
+		padding: 0;
+		margin: 0 10px 0 0;
+	}
+
+	.viewData_teb_data ul li {
+		width: 102px;
+		height: 30px;
+		line-height: 30px;
+		color: #606266;
+		font-size: 14px;
+		text-align: center;
+		border-right: 1px solid #DBDFE6;
+	}
+
+	.viewData_teb_data ul li:last-child {
+		border-right: none;
+	}
+
+	.viewData .active {
+		background: #5C91FF;
+		color: #fff!important;
+	}
+
+	.viewData_teb_time {
+		display: flex;
+	}
+
+	.line_box {
+		width:1310px;
+		height: 400px;
+		margin: 0 auto 30px auto;
+	}
+	.bgEnTime{
+		font-size: 14px;
+		text-align: center;
+		margin-bottom: 30px;
+		margin-top: 10px;
+		color: rgba(92, 145, 255, 1);
+	}
+
+	.chart_box {
+		position: relative;
+	}
+
+	.chart_box_select {
+		position: relative;
+		z-index: 999;
+		cursor:pointer;
+	}
+	
+
+/*图表*/
+.chart{
+	display: flex;
+	align-items: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #DBDFE6;
+}
+
+.chart-ul{
+	display: flex;
+	width: 350px;
+	height: 30px;
+	line-height: 30px;
+	border:1px solid #DBDFE6;
+	margin-right: 10px;
+}
+
+.chart-ul li{
+	padding: 0 24px;
+	text-align: center;
+	color: #606266;
+	font-size: 16px;
+	border-right: 1px solid #DBDFE6;
+	cursor:pointer;
+}
+
+.chart-ul-li{
+	border-right:0px solid #DBDFE6!important;
+}
+
+/*日历*/
+.layui-form-item {
+    margin-bottom: 0!important;
+}
+
+.layui-form-item .layui-inline {
+    margin-bottom: 0!important;
+    margin-right: 0px!important;
+    width: 124px;
+    position: relative;
+}
+
+.layui-form-item .layui-inline img{
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	margin-top: -4.5px;
+    width: 10px;
+    height: 9px;
+    background: #0000FF;
+}
+
+.layui-form-cen{
+	margin: 0 11px;
+}
+
+.layui-input, .layui-select, .layui-textarea {
+    height: 33px!important;
+	line-height: 33px!important;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.layui-form-item {
+    display: flex!important;
+    align-items: center;
+}
+
+.layui-input, .layui-textarea {
+    padding-left: 40px!important;
+}
+
+.layui-form-pane .layui-input {
+    width: 190px;
+    height: 30px;
+    margin-bottom: 40px;
+}
+
+.layui-form-pane .layui-input-block {
+    margin-left: 0px!important;
+}
+
+.chart-ul-color{
+	background: #5D91FF;
+	color: #fff!important;
+}

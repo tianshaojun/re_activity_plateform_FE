@@ -1,0 +1,226 @@
+
+  .page-audit {
+    position: relative;
+  }
+
+  .page-audit .layui-tab-title li {
+    padding: 0px 8px;
+    font-size: 16px;
+    margin-right: 80px;
+  }
+  .page-audit .layui-tab-title li:first-child {
+    margin-left: 40px;
+  }
+  .page-audit .layui-tab-brief>.layui-tab-title .layui-this {
+      color: #7D9BFF;
+  }
+  .page-audit .layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after {
+    border-bottom: 2px solid #7D9BFF;
+  }
+
+  .page-audit .layui-tab-title {
+    height: 48px;
+  }
+  .page-audit .layui-tab-title .layui-this:after {
+    height: 48px;
+  }
+
+ 
+
+  .page_block {
+    margin: 20px 40px;
+    width: 800px;
+    float: left;
+  }
+
+  .btn_nav {
+    height: 36px;
+    line-height: 36px;
+    margin: 20px auto;
+  }
+
+  .page-detail {
+    color: #333;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  .prev {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: #606266;
+    background: none;
+    background: #7D9BFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .next {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: #606266;
+    background: none;
+    background: #7D9BFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .layui-upload-list {
+    width: 200px;
+    text-align: center;
+  }
+
+  .layui-upload-img {
+    width: 200px;
+    height: 90px;
+    margin-bottom: 10px;
+    background: #D8D8D8;
+    border: none;
+  }
+
+  .upload_one {
+    margin-top: 30px;
+    overflow: hidden;
+  }
+
+  .upload_one .ban-tit {
+    float: left;
+    width: 20%;
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+  }
+
+  .layui-set {
+    float: left;
+  }
+
+  .clear {
+    clear: both;
+    overflow: hidden;
+  }
+
+  .input-file {
+    width: 80px;
+    height: 34px;
+    text-align: center;
+    line-height: 36px;
+    border-left: 1px solid #DBDFE6;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #999;
+  }
+
+  .input-set {
+    width: 490px;
+    height: 34px;
+    border: 1px solid #DBDFE6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .input-unload {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  .text-size {
+    color: #999;
+  }
+  .next-btn {
+    margin-left: 50%;
+  }
+  .prev-btn {
+      float: left;
+      background:none;
+      border: 1px solid #DBDFE6;
+      color: #606266;
+  }
+  /* 资讯设置 */
+  .audit-main .layui-tab-title{
+    border: none;
+  }
+
+  .audit-main .layui-tab-title li {
+    border: 1px solid #999;
+    margin-right: 50px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    font-size: 14px;
+  }
+
+  .audit-main .layui-tab-title li.layui-this {
+    border: 1px solid #7D9BFF;
+    color:#7D9BFF;
+  }
+
+  .audit-main .layui-tab-title .layui-this:after {
+    border: none;
+    display: none;
+  }
+
+  .tit_one .ban-tit {
+    float: left;
+    width: 20%;
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+  }
+  .lay-set input {
+    width: 74%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .audit-tab-content {
+    margin-top: 30px;
+  }
+  .detail_one .ban-tit{
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .detail_one .detail-edit {
+    width: 100%;
+    height: 160px;
+    background: #EDEDED;
+  }
+
+.layui-input-inline {
+  width: 64%;
+  /* margin-top: 20px; */
+}
+.layui-input-inline select{
+  border:1px solid #ddd;
+  width: 100%;
+  height: 38px;
+  padding:0px 0px 0px 10px;
+  appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  color: #555;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.tit-one-bt {
+  margin-bottom: 20px;
+}

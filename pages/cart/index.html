@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../../css/plugin/reset.css">
+		<link rel="stylesheet" href="../../css/cart.css">
+		<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+		<link rel="stylesheet" type="text/css" href="../../css/common/header.css" />
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/plugin/layui/layui.js"></script>
+		<title>模板</title>
+	</head>
+	<style>
+		.tab>li:nth-child(3) a {
+			color: #4B73FF!important;
+		}
+		
+		.layui-form {
+			width: 14px;
+			height: 14px;
+			margin: 0 10px;
+		}
+		
+		.layui-form-checked[lay-skin=primary] i {
+			border-color: #7D9BFF;
+			background-color: #7D9BFF;
+			color: #fff;
+		}
+		
+		.layui-form-checkbox[lay-skin=primary]:hover i {
+			border-color: #7D9BFF;
+			color: #fff;
+		}
+	</style>
+
+	<body>
+		<!-- 头部 -->
+		<!-- 导航 start -->
+		<div class="header">
+			<script type="text/javascript">
+				$(".header").load("../common/header.html");
+			</script>
+		</div>
+
+		</div>
+		<!--teb-->
+		<div class="layui-tab layui-tab-brief nav" lay-filter="docDemoTabBrief">
+			<!--购物车-->
+			<div class="cart-show"></div>
+			<div class="my-cart">
+				<div class="my-cart-head">
+					<p>礼品购物车</p>
+					<button id="allSelect">全选</button>
+				</div>
+				<!--list-->
+				<ul>
+					<li class="my-cart-list">
+						<div class="my-cart-list-top">
+
+							<label class="my_protocol">
+								<input type="checkbox" name="" title="" lay-skin="primary" checked class="box input_agreement_protocol">
+						      	<span></span>
+							</label>
+
+							<p class="overflowTwo">完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾</p>
+							<img src="../../images/shanchu.png" class="deleteOne" />
+						</div>
+						<div class="my-cart-list-botton">
+							<div class="cart-list-botton">
+								<p class="cart-list-botton-name">数量</p>
+								<div class="cart-list-botton-num">
+									<input type="button" name="name" value="" class="cart-list-botton-min reduce">
+
+									<input type="text" name="" id="" value="0" class="textNum" />
+
+									<input type="button" name="name" value="	" class="cart-list-botton-max add" />
+								</div>
+							</div>
+							<div class="cart-list-botton-sum">
+								<p>小计:<span class="xiaoji">0</span><span>积分</span>
+								</p>
+							</div>
+						</div>
+						<!--下划线-->
+						<div class="underline"></div>
+					</li>
+					<li class="my-cart-list">
+						<div class="my-cart-list-top">
+							<label class="my_protocol">
+									<input type="checkbox" name="" title="" lay-skin="primary" checked class="box input_agreement_protocol">
+							      	<span></span>
+								</label>
+							<p class="overflowTwo">完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾</p>
+							<img src="../../images/shanchu.png" class="deleteOne" />
+						</div>
+						<div class="my-cart-list-botton">
+							<div class="cart-list-botton">
+								<p class="cart-list-botton-name">数量</p>
+								<div class="cart-list-botton-num">
+									<input type="button" name="name" value="" class="cart-list-botton-min reduce">
+
+									<input type="text" name="" id="" value="0" class="textNum" />
+
+									<input type="button" name="name" value="	" class="cart-list-botton-max add" />
+								</div>
+							</div>
+							<div class="cart-list-botton-sum">
+								<p>小计:<span class="xiaoji">0</span> <span>积分</span>
+								</p>
+							</div>
+						</div>
+						<!--下划线-->
+						<div class="underline"></div>
+					</li>
+				</ul>
+				<div class="close ">
+					<div class="closeBox clearfix">
+						<p class="close-P1">总计:<span class="heji">0</span><span>积分</span></p>
+					</div>
+
+					<p class="close-P2">可用积分:2222积分<span>积分不住,去充值</span></p>
+					<button class="close-but">去结算</button>
+				</div>
+
+			</div>
+			<!--购物车end-->
+			<ul class="layui-tab-title">
+				<li class="layui-this">网站设置</li>
+				<li>用户管理</li>
+				<li>权限分配</li>
+				<li>商品管理</li>
+				<li>订单管理</li>
+			</ul>
+			<div class="li-cart">
+				<div class="li-cart-box">
+					<img src="../../images/gwc.png" />
+					<p class="li-cart-p">购物车</p>
+				</div>
+			</div>
+
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<div class="layui-tab-flex">
+						<!-- <a href="../cartDetails/index.html"> -->
+							<div class="layui-tab-list">
+								<img class="layui-tab-img" src="../../images/core4.png" />
+								<div class="tab-title overflowTwo">
+									完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾
+								</div>
+								<div class="tab-box">
+									<div class="tab-box-left">
+										<p class="tab-box-left-money">50<span>积分</span></p>
+										<p class="tab-box-left-num">月销222</p>
+									</div>
+									<div class="tab-box-cart">
+										加入购物车
+									</div>
+								</div>
+							</div>
+						<!-- </a> -->
+						<div class="layui-tab-list">
+							<img class="layui-tab-img" src="../../images/core4.png" />
+							<div class="tab-title overflowTwo">
+								完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾
+							</div>
+							<div class="tab-box">
+								<div class="tab-box-left">
+									<p class="tab-box-left-money">50<span>积分</span></p>
+									<p class="tab-box-left-num">月销222</p>
+								</div>
+								<div class="tab-box-cart">
+									加入购物车
+								</div>
+							</div>
+						</div>
+						<div class="layui-tab-list">
+							<img class="layui-tab-img" src="../../images/core4.png" />
+							<div class="tab-title overflowTwo">
+								完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾
+							</div>
+							<div class="tab-box">
+								<div class="tab-box-left">
+									<p class="tab-box-left-money">50<span>积分</span></p>
+									<p class="tab-box-left-num">月销222</p>
+								</div>
+								<div class="tab-box-cart">
+									加入购物车
+								</div>
+							</div>
+						</div>
+						<div class="layui-tab-list">
+							<img class="layui-tab-img" src="../../images/core4.png" />
+							<div class="tab-title overflowTwo">
+								完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾
+							</div>
+							<div class="tab-box">
+								<div class="tab-box-left">
+									<p class="tab-box-left-money">50<span>积分</span></p>
+									<p class="tab-box-left-num">月销222</p>
+								</div>
+								<div class="tab-box-cart">
+									加入购物车
+								</div>
+							</div>
+						</div>
+						<div class="layui-tab-list">
+							<img class="layui-tab-img" src="../../images/core4.png" />
+							<div class="tab-title overflowTwo">
+								完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾
+							</div>
+							<div class="tab-box">
+								<div class="tab-box-left">
+									<p class="tab-box-left-money">50<span>积分</span></p>
+									<p class="tab-box-left-num">月销222</p>
+								</div>
+								<div class="tab-box-cart">
+									加入购物车
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="layui-tab-item">内容2</div>
+				<div class="layui-tab-item">内容3</div>
+				<div class="layui-tab-item">内容4</div>
+				<div class="layui-tab-item">内容5</div>
+			</div>
+		</div>
+		<!--查看更多-->
+		<div class="more">
+			查看更多
+		</div>
+		<!--teb end-->
+
+		<!--遮罩-->
+		<div class="shade"></div>
+		<div class="shade-box">
+				<p class="shade-box-name">支付确认</p>
+				<div class="shade-box-ul-box">
+					<div class="shade-box-ul">
+						<div class="color1">
+							<div class="shade-box-width1">商品属性</div>
+							<div class="shade-box-width2">单价</div>
+							<div class="shade-box-width3">采购数量</div>
+							<div class="shade-box-width4">总价</div>
+						</div>
+						<div class="shade-ul">
+							<ul class="color">
+								<li class="shade-box-width1">完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾</li>
+								<li class="shade-box-width2">500积分</li>
+								<li class="shade-box-width3">3个</li>
+								<li class="shade-box-width4">1500积分</li>
+							</ul>
+							<ul class="color">
+								<li class="shade-box-width1">完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾</li>
+								<li class="shade-box-width2">500积分</li>
+								<li class="shade-box-width3">3个</li>
+								<li class="shade-box-width4">1500积分</li>
+							</ul>
+							<ul class="color">
+								<li class="shade-box-width1">完美日记迷你香水5ml女士小样持久淡香独角兽分装香精香体喷雾</li>
+								<li class="shade-box-width2">500积分</li>
+								<li class="shade-box-width3">3个</li>
+								<li class="shade-box-width4">1500积分</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="pay">
+					<p>实际支付: <span>555</span>积分</p>
+					<button>立即支付</button>
+				</div>
+			</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<script type="text/javascript">
+				$(".footer").load("../common/footer.html");
+			</script>
+		</div>
+	</body>
+	<script>
+		layui.use('element', function() {
+			var $ = layui.jquery,
+				element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+			//触发事件
+			var active = {
+				tabAdd: function() {
+					//新增一个Tab项
+					element.tabAdd('demo', {
+						title: '新选项' + (Math.random() * 1000 | 0) //用于演示
+							,
+						content: '内容' + (Math.random() * 1000 | 0),
+						id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+					})
+				},
+				tabChange: function() {
+					//切换到指定Tab项
+					element.tabChange('demo', '22'); //切换到：用户管理
+				}
+			};
+
+			$('.site-demo-active').on('click', function() {
+				var othis = $(this),
+					type = othis.data('type');
+				active[type] ? active[type].call(this, othis) : '';
+			});
+
+			//Hash地址的定位
+			var layid = location.hash.replace(/^#test=/, '');
+			element.tabChange('test', layid);
+
+			element.on('tab(test)', function(elem) {
+				location.hash = 'test=' + $(this).attr('lay-id');
+			});
+
+		});
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			
+			$('.close-but').on('click', function() {
+				$('.shade').show();
+				$('.shade-box').show()
+				$('.my-cart').hide();
+				$('.cart-show').hide();
+			})
+			
+			$('.shade').on('click', function() {
+				$('.shade').hide();	
+				$('.shade-box').hide()
+			})
+			
+			
+			$(".li-cart").click(function() {
+				$('.cart-show').show();
+				$('.my-cart').show();
+			})
+
+			$(".cart-show").click(function() {
+				$('.cart-show').hide();
+				$('.my-cart').hide();
+			})
+
+			//计算总价，编写总价方法
+			function totalPrice() {
+				var zong = 0;
+				console.log()
+				$(".xiaoji").each(function() {
+					if($(this).parents("li").find(".box").prop("checked")) {
+						for(var i = 0; i < $(this).parents("li").find(".box").length; i++) {
+							var all = parseInt($(this).text());
+							zong += all;
+						}
+					}
+				})
+				$(".heji").text(zong);
+			};
+
+			$(".box").click(function() {
+				console.log($(this).prop("checked"))
+				totalPrice()
+			})
+
+			$(".box").prop("checked", false);
+			$(".textNum").prop("disabled", true);
+
+			//减号逻辑
+			$(".reduce").click(function() {
+				var num = $(this).siblings(".textNum").val();
+				num--; //单击“-”减号时，数量递减
+				$(this).siblings(".textNum").val(num);
+				if(num <= 0) {
+					$(this).prop("disabled", true);
+				};
+				var danjia = 5;
+				var xiaoji = danjia * num;
+				$(this).parents("li").find(".xiaoji").text(xiaoji);
+				totalPrice();
+			})
+
+			//加号逻辑（逻辑如同减号的逻辑差不多）
+			$(".add").click(function() {
+				var num = $(this).siblings(".textNum").val();
+				num++;
+				$(this).siblings(".textNum").val(num);
+				if(num > 0) {
+					$(this).siblings(".reduce").prop("disabled", false);
+				};
+				var danjia = 5;
+				var xiaoji = danjia * num;
+				$(this).parents("li").find(".xiaoji").text(xiaoji);
+				totalPrice();
+			})
+
+			//单行删除商品
+			$(".deleteOne").click(function() {
+				$(this).parents('li').remove();
+			})
+
+			//全选
+			$("#allSelect").click(function() {
+				if($(".box").prop("checked") == true) {
+					console.log(1)
+					$(".box").prop("checked", false);
+					$("#allSelect").text("取消")
+					totalPrice()
+				} else {
+					console.log(2)
+					$(".box").prop("checked", true);
+					$("#allSelect").text("全选");
+					totalPrice()
+				}
+			})
+
+		})
+	</script>
+</html>

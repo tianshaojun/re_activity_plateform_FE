@@ -1,0 +1,159 @@
+<link rel="stylesheet" href="../../css/plugin/reset.css">
+<link rel="stylesheet" href="../../css/model.css">
+<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+<link rel="stylesheet" href="../../css/audit.css">
+<style>
+  body {
+    background: #fff;
+  }
+</style>
+
+
+<!-- 审核页面管理-审核页面管理 -->
+<div class="page page-audit">
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+  <ul class="layui-tab-title">
+    <li class="layui-this">banner设置</li>
+    <li>资讯设置</li>
+  </ul>
+  <div class="layui-tab-content">
+    <div class="layui-tab-item layui-show">
+          <!-- banner设置模块 -->
+          <div class="page_block">
+            <p class="page-detail">
+              说明：<br />
+              1.提交审核小程序时，系统会自动切换成假页面，假页面可提高审核通过率。<br />
+              2.审核假页面默认为资讯类信息展示，可自行根据小程序的类目配置对应的展示信息。 <br />
+              3.请保持小程序名称、简介，类目与假页面内容保持一致。
+            </p>
+            <!-- Banner1 -->
+            <div class="upload_one">
+              <p class="ban-tit">Banner1</p>
+              <div class="layui-upload layui-set">
+                <div class="input-set" id="test1">
+                  <input type="text" class="input-unload" />
+                  <span class="input-file">选择文件</span>
+                </div>
+                <div class="layui-upload-list">
+                  <img class="layui-upload-img" id="demo1">
+                  <p id="demoText" class="text-size">（建议尺寸）</p>
+                </div>
+              </div>
+            </div>
+            <!-- Banner2 -->
+            <div class="upload_one">
+              <p class="ban-tit">Banner2</p>
+              <div class="layui-upload layui-set">
+                <div class="input-set" id="test2">
+                  <input type="text" class="input-unload" />
+                  <span class="input-file">选择文件</span>
+                </div>
+                <div class="layui-upload-list">
+                  <img class="layui-upload-img" id="demo2">
+                  <p id="demoText" class="text-size">（建议尺寸）</p>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Banner3 -->
+            <div class="upload_one">
+              <p class="ban-tit">Banner3</p>
+              <div class="layui-upload layui-set">
+                <div class="input-set" id="test3">
+                  <input type="text" class="input-unload" />
+                  <span class="input-file">选择文件</span>
+                </div>
+                <div class="layui-upload-list">
+                  <img class="layui-upload-img" id="demo3">
+                  <p id="demoText" class="text-size">（建议尺寸）</p>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+  
+            <!-- 下一步 -->
+            <div class="btn_nav">
+              <input type="button" class="next left next-btn" value="下一步" />
+            </div>
+          </div>
+
+
+    </div>
+    <div class="layui-tab-item">
+      <div class="page_block">
+        <p class="page-detail">
+          说明：<br />
+          1.提交审核小程序时，系统会自动切换成假页面，假页面可提高审核通过率。<br />
+          2.审核假页面默认为资讯类信息展示，可自行根据小程序的类目配置对应的展示信息。 <br />
+          3.请保持小程序名称、简介，类目与假页面内容保持一致。
+        </p>
+        <div class="audit-main">
+          <div class="layui-tab">
+            <ul class="layui-tab-title">
+              <li class="layui-this">资讯一</li>
+              <li>资讯二</li>
+              <li>资讯三</li>
+            </ul>
+            <div class="layui-tab-content audit-tab-content">
+              <div class="layui-tab-item layui-show">
+                <div class="lay-block">
+                  <div class="tit_one tit-one-bt">
+                    <p class="ban-tit">资讯图片</p>
+                    <div class="layui-input-block lay-set">
+                      <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入资讯图片"
+                        class="layui-input">
+                    </div>
+                  </div>
+
+                  <div class="tit_one">
+                    <p class="ban-tit">资讯分类</p>
+                    <div class="layui-input-inline">
+                        <select name="quiz3">
+                          <option value="">请选择县/区</option>
+                          <option value="西湖区">西湖区</option>
+                          <option value="余杭区">余杭区</option>
+                          <option value="拱墅区">临安市</option>
+                        </select>
+                      </div>
+                  </div>
+
+                    <div class="upload_one">
+                      <p class="ban-tit">资讯图片</p>
+                      <div class="layui-upload layui-set">
+                        <div class="input-set" id="test4">
+                          <input type="text" class="input-unload" />
+                          <span class="input-file">选择文件</span>
+                        </div>
+                        <div class="layui-upload-list">
+                          <img class="layui-upload-img" id="demo4">
+                          <p id="demoText" class="text-size">（建议尺寸）</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="detail_one">
+                        <p class="ban-tit">内容</p>
+                        <div class="detail-edit">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="layui-tab-item">内容2</div>
+                <div class="layui-tab-item">内容3</div>
+              </div>
+            </div>
+          </div>
+          <!-- 上一步 -->
+          <div class="btn_nav">
+            <input type="button" class="prev prev-btn" value="上一步" />
+            <input type="button" class="next right" id="sub" value="完成" />
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div> 
+</div>
+<script src="../../js/plugin/layui/layui.js"></script>
+<script src="../../js/lib/jquery.min.js"></script>
+<script src="../../js/audit.js"></script>

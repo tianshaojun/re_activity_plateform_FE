@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的礼品</title>
+		<link rel="stylesheet" href="../../css/plugin/reset.css">
+		<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+		<script src="../../js/plugin/layui/layui.js"></script>
+		<script src="../../js/lib/jquery.min.js"></script>
+		<link rel="stylesheet" href="../../css/myGift/gift.css" />
+	</head>
+
+	<body>
+		<!-- 头部 -->
+		<div class="header">
+			<script type="text/javascript">
+				$(".header").load("../common/header.html");
+			</script>
+		</div>
+
+		<!--我的礼品-->
+		<div class="warp">
+			<div class="title">我的礼品</div>
+			<div class="content">
+				<input placeholder="请输入礼品名称" />
+				<button>查询</button>
+			</div>
+			<div class="table">
+				<table class="layui-table" >
+					<thead>
+						<tr>
+							<th>商品编码</th>
+							<th>礼品名称</th>
+							<th>剩余数量</th>
+							<th>采购数量</th>
+							<th>采购时间</th>
+							<th>支付金额</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>12</td>
+							<td>
+								<img src="../../images/banner1.png" />
+								<span>防守打法第三方第三方法第三方士大夫骚粉的顺丰到付</p>
+							</td>
+							<td>5个</td>
+							<td>4个</td>
+							<td>
+								<p>2016-11-29</p>
+								<p>10:22:44</p>
+							</td>
+							<td>500积分</td>
+							<td>
+								<a href="../myGiftMore/index.html ">查看更多</a>
+							</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>
+								<img src="../../images/banner1.png" />
+								<span>防守打法第三方第三方法第三方士大夫骚粉的顺丰到付</p>
+							</td>
+							<td>5个</td>
+							<td>4个</td>
+							<td>
+								<p>2016-11-29</p>
+								<p>10:22:44</p>
+							</td>
+							<td>500积分</td>
+							<td>
+								<a href="../myGiftMore/index.html">查看更多</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="demo"></div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	layui.use('laypage', function() {
+		var laypage = layui.laypage;
+
+		laypage.render({
+			elem: 'demo',
+			count: 50 //数据总数，从服务端得到
+			
+		});
+	})
+</script>

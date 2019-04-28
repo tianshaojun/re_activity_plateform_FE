@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>充值中心</title>
+		<link rel="stylesheet" href="../../css/plugin/reset.css">
+		<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+		<script src="../../js/plugin/layui/layui.js"></script>
+		<script src="../../js/lib/jquery.min.js"></script>
+		<link rel="stylesheet"  href="../../css/recharge/index.css"/>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<div class="header">
+			<script type="text/javascript">
+				$(".header").load("../common/header.html");
+			</script>
+		</div>
+		<!--在线红包充值-->
+		<div class="warp">
+			<div class="title">在线红包充值</div>
+			<div class="content">
+				<div class="col">
+					<label>当前账号</label>
+					<span class="userName">dfsfsdfdsf</span>
+				</div>
+				<div class="col" id="wx">
+					<div class="wx-money">充值金额</div>
+					<span class="integral">
+						<p>￥300</p>
+						<p>3000积分</p>
+						<!--<p>赠送1000积分</p>-->
+					</span>
+					<span class="integral">
+						<p>￥500</p>
+						<p>5万积分</p>
+						<p>赠送1000积分</p>
+					</span>
+					<span class="integral">
+						<p>￥1000</p>
+						<p>30万积分</p>
+						<p>赠送3000积分</p>
+					</span>
+					<span class="integral">
+						<p>￥2000</p>
+						<p>20万积分</p>
+						<p>赠送7000积分</p>
+					</span>
+					<span class="integral">
+						<p>￥3000</p>
+						<p>30万积分</p>
+						<p>赠送15000积分</p>
+					</span>
+				</div>
+				<div class="col">
+					<label>支付方式</label>
+					<span id="icon-wx"><img src="../../images/wx-icon.png" />微信支付</span>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="hint">提示：未使用积分可看行在我的钱包里退款操作</div>
+				<div class="money">
+					<span>应付金额：<em>500</em>元</span>
+					<span>
+						<a href="../pay/index.html">立即支付</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	$(".integral").on("click",function(){
+//		console.log($(this))
+		$(this).css({"border":"1px solid #4B73FF","background":" url(../../images/wx-bg.png) no-repeat right bottom / 15px"}).siblings(".integral").css({"border":"1px solid #DBDFE6","background":"none"})
+	})
+</script>

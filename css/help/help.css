@@ -1,0 +1,72 @@
+ body{
+ 	background: #EDF2F7;
+ 	/*background: red;*/
+ }
+ 
+ /*一级标题*/
+ .layui-side{
+	width:260px!important;
+	background: #fff;
+	box-sizing: border-box;
+	padding:20px 0;
+}
+.layui-layout-admin .layui-bg-black{
+	background-color: #EDF2F7!important;
+}
+.layui-side .layui-side-scroll{
+	width:260px;
+	background: #fff!important;
+	overflow-y: hidden !important;
+}
+.layui-side .layui-side-scroll .layui-nav-tree{
+	width:260px!important;
+	background: red!important;
+}
+.layui-nav-item a{
+	color:#000!important;
+	background: #fff!important;
+}
+.layui-nav-item>a{
+	font-family:PingFangSC-Medium;
+	color:#333;
+	font-weight:500;
+	font-size:18px;
+}
+.layui-nav-itemed a:link{
+	color:#000!important;
+	/*background: #fff!important;*/
+}
+.layui-nav-itemed>a:hover{
+	color:#7D9BFF!important;
+	/*background: #EDF2F7!important;*/
+}
+
+
+/*二级标题*/
+ .layui-side .layui-side-scroll .layui-nav-itemed .layui-nav-child{
+	background-color: #fff!important;
+}
+.layui-side .layui-side-scroll .layui-nav-itemed .layui-nav-child dd a{
+	color: #333333!important;
+}
+ .layui-side .layui-side-scroll .layui-nav-itemed>.layui-nav-child dd a:hover{
+	background-color: #EDF2F7!important;
+	color:#7D9BFF!important;
+}
+
+
+.layui-nav-tree .layui-nav-bar{
+	background: none;
+}
+
+
+ .layui-layout-admin .layui-body{
+ 	left:300px!important;
+ 	margin: 20px;
+ 	z-index:0;
+ }
+.layui-body{
+	overflow-y:hidden;
+	height:837px;
+	width: 1400px;
+}

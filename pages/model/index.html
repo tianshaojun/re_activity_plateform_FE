@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/plugin/reset.css">
+  <link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="../../css/common/header.css" />
+  <link rel="stylesheet" href="../../css/plugin/iconfont.css">
+  <link rel="stylesheet" href="../../css/model.css">
+  <script src="../../js/lib/jquery.min.js"></script>
+  <title>模板库</title>
+</head>
+<body>
+  <!-- 公共头部 -->
+  <div class="header">
+    <script type="text/javascript">
+      $(".header").load("../common/header.html");
+    </script>
+  </div>
+  <!-- 内容模块 -->
+  <div class="page-model">
+    <!-- 左侧 -->
+    <div class="model-left">
+      <div class="model-top">
+        <p class="model-tit">管理小程序</p>
+      </div>
+      <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+        <li class="layui-nav-item">
+          <a href="javascript:void(0);" class="manage-tit"><i class="set_cion user_icon"></i>用户管理</a>
+          <dl class="layui-nav-child">
+            <dd class="userManage"><a href="javascript:void(0);" class="name-tit">用户管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:void(0);" class="manage-tit"><i class="set_cion third_icon"></i>第三方授权</a>
+          <dl class="layui-nav-child">
+            <dd class="verManage"><a href="javascript:void(0);" class="name-tit">版本管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:void(0);" class="manage-tit"><i class="set_cion manage_icon"></i>审核页面管理</a>
+          <dl class="layui-nav-child">
+            <dd class="auditManage"><a href="javascript:void(0);" class="name-tit">审核页面管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:void(0);" class="manage-tit"><i class="set_cion excha_icon"></i>兑换管理</a>
+          <dl class="layui-nav-child">
+            <dd class="changeAddress"><a href="javascript:void(0);" class="name-tit">兑换地址</a></dd>
+          </dl>
+          <dl class="layui-nav-child">
+            <dd class="winInfo"><a href="javascript:void(0);" class="name-tit">中奖人信息</a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+    <!-- 右侧 -->
+    <div class="model-right">
+      <div class="right-main modelheight">
+        <iframe src="./audit-manage.html" frameborder="0" id="mainBlock" style="overflow: visible;" scrolling="no"
+          frameborder="no" width="100%" height="100%"></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/plugin/layui/layui.js"></script>
+  <script src="../../js/common/common.js"></script>
+  <script src="../../js/model-index.js"></script>
+</body>
+</html>

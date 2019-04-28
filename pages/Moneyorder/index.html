@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的钱包</title>
+		<link rel="stylesheet" href="../../css/plugin/reset.css">
+		<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+		<script src="../../js/plugin/layui/layui.js"></script>
+		<script src="../../js/lib/jquery.min.js"></script>
+		<link rel="stylesheet" href="../../css/Moneyorder/index.css">
+	</head>
+
+	<body>
+		<!-- 头部 -->
+		<div class="header">
+			<script type="text/javascript">
+				$(".header").load("../common/header.html");
+			</script>
+		</div>
+		<!--用户信息-->
+		<div class="userInfo">
+			<div class="head">
+				<div class="left">
+					<img src="../../images/wx-bg.png" />
+					<div>账户积分余额：<span>300</span></div>			
+				</div>
+				<div class="rig">
+					<button>立即充值</button>
+					<button>提现</button>	
+				</div>
+			</div>
+		</div>
+		<!--我的礼品-->
+		<div class="warp">
+			<div class="title">订单详情</div>
+			<div class="content">
+				<table class="layui-table">
+							<thead>
+								<tr>
+									<th>订单号</th>
+									<th>产品</th>
+									<th>数量</th>
+									<th>订单完成时间</th>
+									<th>单价积分</th>
+									<th>积分总额</th>
+									<th>订单状态</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr >
+									<td rowspan="3">2342423425345</td>
+									<td>爱奇艺会员*3</td>
+									<td>3个</td>
+									<td>
+										<p>2019/11/23</p>
+										<p>10:23</p>
+									</td>
+									<td>100</td>
+									<td rowspan="3">800积分</td>
+									<td rowspan="3">已支付</td>
+								</tr>
+								<tr>
+									<td>芒果会员*3</td>
+									<td>3个</td>
+									<td>
+										<p>2019/11/23</p>
+										<p>10:23</p>
+									</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>MAC口红</td>
+									<td>3个</td>
+									<td>
+										<p>2019/11/23</p>
+										<p>10:23</p>
+									</td>
+									<td>100</td>
+								</tr>
+							</tbody>
+						</table>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	layui.use('element', function() {
+		var element = layui.element;
+	});
+</script>
+						

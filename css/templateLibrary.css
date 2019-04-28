@@ -1,0 +1,155 @@
+.layui-tab {
+    text-align: left!important;
+    width: 1200px;
+	margin:20px auto!important;
+}
+.carousel{
+	width: 1200px;
+	height: 260px;
+	margin: 0 auto;
+}
+.carousel .layui-carousel img{
+	width: 1200px;
+	height: 260px;
+}
+.carousel-item{
+	width: 1200px;
+	height: 260px;
+}
+
+.layui-tab-title {
+    border-bottom-width: 0px!important;
+}
+
+.layui-tab-brief>.layui-tab-title .layui-this {
+    color: #4B73FF!important;
+}
+
+.layui-tab-title .layui-this {
+    color: #666!important;
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after {
+    border: none;
+    border-radius: 0;
+    border-bottom: 0px solid #4B73FF!important;
+}
+
+.layui-tab-title {
+	height:56px!important;
+	line-height: 56px!important;
+	padding: 0 12px!important;
+	box-shadow:0px 2px 5px 0px rgba(214,214,214,0.45);
+}
+
+.layui-tab-title li {
+	font-weight:400!important;
+	font-size: 16px!important;
+    line-height: 56px!important;
+    padding: 0 12px!important;	
+}
+
+.layui-tab-title .layui-this:after {
+    height: 56px!important;
+}
+
+.layui-tab-flex{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.layui-tab-list{
+	width:228px;
+	height:415px;
+	background:rgba(255,255,255,1);
+	box-shadow:0px 2px 5px 0px rgba(207,206,206,0.33);
+	border-radius:3px;
+	margin-right: 15px;
+	position: relative;
+}
+
+.layui-tab-content{
+	padding: 0!important;
+}
+
+.layui-tab-list:nth-child(5n){
+	margin-right: 0!important;
+}
+
+.layui-tab-list:hover .layui-tab-listShow{
+	display: block;
+}
+
+.layui-tab-img{
+	width: 100%;
+	height: 360px;	
+}
+
+.layui-tab-botton{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size:14px;
+	text-align: center;
+	font-family:PingFangSC-Regular;
+	font-weight:400;
+	color:rgba(96,98,102,1);
+}
+
+.layui-tab-listShow{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.shade{
+	width:100%;
+	height:344px;
+	background:rgba(0,0,0,.6);
+	border-radius:3px 3px 0px 0px;
+	opacity:0.6;
+	position: relative;
+}
+
+.shade .shade-img{
+	width:111px;
+	height:111px;
+	background: salmon;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -55px;
+	margin-top: -55px;
+}	
+
+.shade-botton{
+	height: 70px;
+	width: 100%;	
+	background: #fff;
+}
+
+.shade-botton-click{
+	width:90px;
+	height:40px;
+	line-height: 40px;
+	background:rgba(125,155,255,1);
+	border-radius:4px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	margin: 15px auto;
+	cursor:pointer;
+}
+
+.more{
+	width: 1200px;
+	height: 38px;
+	line-height: 38px;
+	color:#999999;
+	font-size: 14px;
+	text-align:center;
+	margin: 30px auto 50px auto;
+}

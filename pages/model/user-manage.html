@@ -1,0 +1,214 @@
+<!-- 用户管理模块 -->
+<link rel="stylesheet" href="../../css/plugin/reset.css">
+<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+<link rel="stylesheet" href="../../css/model.css">
+<script src="../../js/lib/jquery.min.js"></script>
+<script src="../../js/plugin/layui/layui.all.js"></script>
+<style>
+  body {
+    background: #fff;
+  }
+  .layui-table-view{
+    margin:0;
+  }
+  .layui-body{
+    overflow-y:scroll;
+  }
+  .layui-border-box{
+    /* background:pink; */
+    margin-left:40px;
+    margin-right:210px;
+  }
+  .layui-table-body{
+    overflow-x: hidden;
+  }
+  .layui-border-box .layui-table-header{
+    /* background: red; */
+    margin-left: -40px;
+  }
+  .layui-border-box .layui-table-body{
+    /* background: yellow; */
+    margin-left: -40px;
+  }
+  .layui-table-cell{
+    text-align: center;
+  }
+  .layui-table-page{
+    /* background: green; */
+    margin-top:40px;
+    /* float:right; */
+    /* width:310px; */
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* 分页隐藏部分元素 */
+  .layui-laypage-count{
+    display: none !important;
+  }
+  .layui-laypage-limits{
+    display: none !important;
+  }
+  .layui-laypage-btn{
+    display: none !important;
+  }
+</style>
+<!-- 用户管理-用户管理 -->
+<div class="page">
+  <h3 class="user-manage">用户管理</h3>
+  <div class="title">
+    <div class="id">
+      <span>用户id</span>
+      <input type="text" placeholder="请输入您要查询的id">
+    </div>
+    <div class="nickName">
+      <span>用户昵称</span>
+      <input type="text" placeholder="请输入您要查询的昵称">
+    </div>
+    <div class="superior">
+      <span>上级用户id</span>
+      <input type="text" placeholder="请输入您要查询的昵称">
+    </div>
+    <div class="btn">
+      <span>搜索</span>
+      <span class="reset">重置</span>
+    </div>
+  </div>
+  <div class="batch">
+    <span>批量通过</span>
+    <span class="reject">批量拒绝</span>
+  </div>
+  <!-- layui表格 -->
+    <table id="demo" lay-filter="test"></table>
+</div>
+<script>
+  var $ = null;
+  layui.use(['jquery','upload','form','table','layer','element','laydate'], function () {
+    $ = layui.layer,
+        element = layui.element,
+        layer = layui.upload,
+        upload = layui.upload,
+        form = layui.form,
+        laydate = layui.laydate,
+        table = layui.table;
+    var ids = new Array();
+    var table_data=new Array();
+    var a = table.render({
+      elem: '#demo',
+      height: 500,
+      url: '/data/table.json', //数据接口
+      page: true, //开启分页
+      count:23,
+      cols: [[ //表头
+        {checkbox: true},
+        { field: 'id', title: '用户id'},
+        { field: 'username', title: '渠道id' },
+        { field: 'sex', title: '上级id' },
+        { field: 'city', title: '用户昵称' },
+        { field: 'sign', title: '用户头像', templet:'<div><img src="{{d.sign}}"</div>'},
+        { field: 'experience', title: '活动编号' },
+        { field: 'score', title: '提现前金额' },
+        { field: 'classify', title: '提现金额' },
+        { field: 'wealth', title: '提现后金额' },
+        { field: 'username', title: '手机型号' },
+        { field: 'sex', title: '状态' },
+        { field: 'city', title: '审核详情' },
+        { field: 'sign', title: '创建时间' },
+        { field: 'experience', title: '操作' }
+      ]],
+      page: { //分页设定
+          // layout: ['count', 'prev', 'page', 'next'], //自定义分页布局
+          curr: 1, //设定初始在第 1 页
+          limit: 10,//每页多少数据
+          groups: 5 //只显示 5 个连续页码
+      },
+      even:true,
+      done:function(res, curr, count){
+        table_data=res.data;
+        console.log(table_data)
+        console.log(res)
+        console.log(curr)
+        console.log(count)
+
+        for(var i=0;i<res.data.length;i++){
+          for(var j=0;j<ids.length;j++){
+            if(res.data[i].id == ids[j]){
+              res.data[i]['LAY_TABLE_INDEX'];
+              var index=res.data[i]['LAY_TABLE_INDEX'];
+              $('.layui-table-fixed-l tr[data-index=' + index + '] input[type="checkbox"]').prop('checked', true);
+              $('.layui-table-fixed-l tr[data-index=' + index + '] input[type="checkbox"]').next().addClass('layui-form-checked');
+            }
+          }
+        }
+
+        var checkStatus = table.checkStatus('my-table');
+            if(checkStatus.isAll){
+              $(' .layui-table-header th[data-field="0"] input[type="checkbox"]').prop('checked', true);
+              $('.layui-table-header th[data-field="0"] input[type="checkbox"]').next().addClass('layui-form-checked');
+        }
+
+      }
+    });
+
+    table.on('checkbox(userTables)', function (obj) {
+           if(obj.checked==true){
+               if(obj.type=='one'){
+                   ids.push(obj.data.id);
+              }else{
+                   for(var i=0;i<table_data.length;i++){
+                       ids.push(table_data[i].id);
+                   }
+               }
+           }else{
+               if(obj.type=='one'){
+                   for(var i=0;i<ids.length;i++){
+                      if(ids[i]==obj.data.id){
+                           ids.remove(i);
+                       }
+                  }
+               }else{
+                   for(var i=0;i<ids.length;i++){
+                       for(var j=0;j<table_data.length;j++){
+                           if(ids[i]==table_data[j].id){
+                              ids.remove(i);
+                          }
+                       }
+                   }
+               }
+           }
+        });
+
+        var $ = layui.$, active = {
+            reload: function () {
+                //执行重载
+                table.reload('userTables', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    , where: {
+                       searContent: $("input[name=searContent]").val()
+                    }
+                });
+            }
+        };
+
+        $('#searchEmailCompany').on('click', function () {
+            ids=new Array();
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+        element.init();
+  });
+
+  Array.prototype.remove=function(dx)
+    {
+        if(isNaN(dx)||dx>this.length){return false;}
+        for(var i=0,n=0;i<this.length;i++)
+        {
+            if(this[i]!=this[dx])
+            {
+                this[n++]=this[i]
+            }
+        }
+        this.length-=1
+    }
+</script>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../../css/plugin/reset.css">
+		<link rel="stylesheet" href="../../css/myProject.css">
+		<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/plugin/layui/layui.js"></script>
+		<title>我的项目</title>
+	</head>
+	<style>
+		.tab>li:nth-child(3) a {
+			color: #4B73FF !important;
+		}
+	</style>
+
+	<body>
+		<div class="header">
+			<script type="text/javascript">
+				$(".header").load("../common/header.html");
+			</script>
+		</div>
+		<!--主体-->
+		<div class="myProject">
+			<!--上面-->
+			<div class="myProject-top">
+				<img class="myProject-img" src="" />
+				<div class="myProject-num">
+					<p class="myProject-num-p1">积分余额：<span>300</span></p>
+					<p class="myProject-num-p2">
+						<a href="../recharge/index.html">充值</a>
+					</p>
+				</div>
+				<ul>
+					<li>
+						<p class="myProject-li-p1">已使用积分</p>
+						<p class="myProject-li-p2">500</p>
+					</li>
+					<li>
+						<p class="myProject-li-p1">项目数</p>
+						<p class="myProject-li-p2">500</p>
+					</li>
+					<li>
+						<p class="myProject-li-p1">访客数</p>
+						<p class="myProject-li-p2">500</p>
+					</li>
+					<li>
+						<p class="myProject-li-p1">用户数</p>
+						<p class="myProject-li-p2">500</p>
+					</li>
+					<li>
+						<p class="myProject-li-p1">转发数</p>
+						<p class="myProject-li-p2">500</p>
+					</li>
+				</ul>
+				<div class="myProject-gift">
+					<a href="../cart/index.html">
+						<img src="../../images/lp.png" />
+						<p>礼品商城</p>
+					</a>
+				</div>
+			</div>
+			<!--上面end-->
+			<!--box-->
+			<div class="myProject-list">
+				<div class="layui-tab-list">
+					<img class="layui-tab-img" src="../../images/banner2.png" />
+					<div class="layui-tab-botton">
+						这个数据是假的
+					</div>
+					<!--show-->
+					<div class="layui-tab-listShow">
+						<div class="shade-po-s">
+							<img class="shade-img" src="../../images/core2.png" />
+							<div class="shade-po">
+								<div class="shade-po-box shade-data">
+									<img src="../../images/myy.png" data-url = "../../images/myy"/>
+									<a href="../viewData/index.html">
+										<p class="shade-po-box-p">数据</p>
+									</a>
+								</div>
+								<div class="shade-po-box shade-rwm">
+									<img src="../../images/myx.png" data-url = "../../images/myx"/>
+									<p>下载二维码</p>
+								</div>
+								<div class="shade-po-box shade-delete">
+									<img src="../../images/mys.png" data-url = "../../images/mys"/>
+									<p>删除</p>
+								</div>
+							</div>
+							<div class="shade"></div>
+						</div>
+
+						<div class="shade-botton">
+							<div class="shade-botton-click shade-sj">
+								<img src="../../images/myb.png" />
+								<p>设计小程序</p>
+							</div>
+							<a href="../model/index.html">
+								<div class="shade-botton-click shade-gl">
+									<img src="../../images/myg.png" />
+									<p>管理小程序</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!--box end-->
+		</div>
+		<!--主体end-->
+		<div class="footer">
+			<script type="text/javascript">
+				$(".footer").load("../common/footer.html");
+			</script>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			
+			$('.shade-po-box').hover(
+				function() {
+					var urlImg = $(this).find('img').data('url')
+					$(this).find('img').attr('src', urlImg + "1.png")
+					$(this).find('p').css("color", "#8BA5FF")
+				},
+				function() {
+					var urlImg = $(this).find('img').data('url')
+					$(this).find('img').attr('src', urlImg + ".png")
+					$(this).find('p').css("color", "#fff")
+				}
+			)
+			$('.shade-sj').hover(
+				function() {
+					$('.shade-sj img').attr('src', '../../images/myb1.png')
+					$('.shade-sj p').css("color", "#8BA5FF")
+				},
+				function() {
+					$('.shade-sj img').attr('src', '../../images/myb.png')
+					$('.shade-sj p').css("color", "#606266")
+				}
+			)
+
+			$('.shade-gl').hover(
+				function() {
+					$('.shade-gl img').attr('src', '../../images/myg1.png')
+					$('.shade-gl p').css("color", "#8BA5FF")
+				},
+				function() {
+					$('.shade-gl img').attr('src', '../../images/myg.png')
+					$('.shade-gl p').css("color", "#606266")
+				}
+			)
+		})
+	</script>
+</html>

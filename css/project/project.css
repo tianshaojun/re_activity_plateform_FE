@@ -1,0 +1,1396 @@
+/* 项目设置页面 */
+html,body,.page-setting{
+    height:100%;
+}
+.top{
+    position: absolute;
+    height: 80px;
+    background:#fff;
+    left: 0;
+    right: 0;
+    top:0;
+    display: flex;
+}
+.top .left{
+    width:120px;
+    height:54px;
+    background: #ccc;
+    margin-left:30px;
+    margin-top:13px;
+}
+.top .right{
+    width:260px;
+    height:40px;
+    right:20px;
+    position: absolute;
+    top:20px;
+    display:flex;
+    justify-content:space-between;
+}
+.top .right span{
+    width:120px;
+    height:38px;
+    border-radius:4px;
+    font-size:16px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:default;
+}
+.top .right .save{
+    background:rgba(75,115,255,1);
+    color:#fff;
+    height:40px;
+}
+.top .right .cancel{
+    background:#fff;
+    border:1px solid #4B73FF;
+    color:#4B73FF;
+}
+.center{
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#EEEEEE;
+    overflow: auto;
+}
+.center .aside{
+    position: fixed;
+    width:200px;
+    background:#fff;
+    top:80px;
+    bottom:0;
+    left:0;
+}
+.center .aside li{
+    width:100%;
+    height:50px;
+    display:flex;
+}
+.center .aside li span{
+    font-size:20px;
+    margin-left:30px;
+    margin-top:16px;
+    margin-right:16px;
+    color:#B1B1B2;
+}
+.center .aside li a{
+    height:49px;
+    width:100px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:49px;
+    border-bottom:1px solid #ECEDF0;
+    color:#898A8A;
+}
+.center .aside .active span{
+    color:#4F76FF;
+}
+.center .aside .active a{
+    color:#4F76FF;
+    font-weight:bold;
+}
+.center .aside_right{
+    height: 1200px;
+    margin-left:200px;
+    margin-right:20px;
+}
+.center .aside_right .template{
+    position: absolute;
+    width:480px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.center .aside_right .template img{
+    width:360px;
+    height:680px;
+    margin-top:20px;
+}
+.center .aside_right .template span{
+    height:18px;
+    font-size:18px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    margin-top:10px;
+}
+/* tab选项卡 */
+.center .aside_right .layui-tab{
+    /* height: 1000px; */
+    margin-left: 480px;
+    background-color: #fff;
+    margin-top:20px;
+}
+.center .aside_right .layui-tab-title{
+    height:50px;
+    background:rgba(249,249,249,1);
+    border:1px solid rgba(233,233,233,1);
+    border-radius:0px 4px 0px 0px;
+}
+.center .aside_right .layui-tab-title li{
+    height:100%;
+    width:146px;
+    padding:0;
+    line-height:50px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+}
+.center .aside_right .layui-tab-title .layui-this{
+    color:#4B73FF;
+    border-top:2px solid #4B73FF;
+    height:100%;
+}
+.center .aside_right .layui-tab-title .layui-this:after{
+    height:50px;
+}
+.center .aside_right .layui-tab-content{
+    /* background: pink; */
+    height:1200px !important;
+    padding-left:40px;
+    padding-top:50px;
+    padding-right:0;
+    padding-bottom:0;
+}
+/* 基础设置页面 */
+.center .aside_right .layui-tab-content .basic{
+    /* background: yellow; */
+}
+.center .aside_right .layui-tab-content .basic h3{
+    height:17px;
+    font-size:18px;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height: 17px;
+}
+.center .aside_right .layui-tab-content .basic .activity{
+    width:596px;
+    font-family:SourceHanSansCN-Regular;
+    height:40px;
+    display: flex;
+    margin-top:39px;
+    justify-content:space-between;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .activity .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat; 
+}
+.center .aside_right .layui-tab-content .basic .activity h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height: 14px;
+}
+.center .aside_right .layui-tab-content .basic .activity input{
+    width:500px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+}
+.center .aside_right .layui-tab-content .basic .time{
+    width:596px;
+    font-family:SourceHanSansCN-Regular;
+    height:86px;
+    margin-top:20px;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .time .icon{
+    position:absolute;
+    left:-10px;
+    top:16px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat; 
+}
+.center .aside_right .layui-tab-content .basic .time h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height: 14px;
+    padding-top:13px;
+    float:left;
+}
+.center .aside_right .layui-tab-content .basic .time .layui-form .layui-form-item{
+    display: flex;
+    align-items:center;
+    margin-left:94px;
+    float:left;
+    margin-top:-46px;
+    margin-bottom:7px;
+}
+.center .aside_right .layui-tab-content .basic .time .layui-form .layui-form-item .layui-inline{
+    margin-bottom:2px;
+}
+.center .aside_right .layui-tab-content .basic .time .layui-form .layui-form-item .layui-form-cen{
+    margin-top:10px;
+    margin-right:10px;
+    font-size:16px;
+}
+.center .aside_right .layui-tab-content .basic .time .notice{
+    margin-left:94px;
+    display:flex;
+    width:480px;
+    height:36px;
+    color:#CBCBCB;
+}
+.center .aside_right .layui-tab-content .basic .name{
+    width:596px;
+    height:120px;
+    display: flex;
+    margin-top:20px;
+    justify-content:space-between;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .name .icon{
+    position:absolute;
+    left:-10px;
+    top:16px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat; 
+}
+.center .aside_right .layui-tab-content .basic .name h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+    padding-top:13px;
+}
+.center .aside_right .layui-tab-content .basic .name textarea{
+    width:500px;
+    height:118px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+}
+.center .aside_right .layui-tab-content .basic h2{
+    height:18px;
+    font-size:18px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height: 18px;
+    margin-top:49px;
+}
+.center .aside_right .layui-tab-content .basic .number{
+    width:596px;
+    font-family:SourceHanSansCN-Regular;
+    height:40px;
+    display: flex;
+    margin-top:39px;
+    justify-content:space-between;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .number .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat; 
+}
+.center .aside_right .layui-tab-content .basic .number h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+}
+.center .aside_right .layui-tab-content .basic .number input{
+    width:500px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+}
+.center .aside_right .layui-tab-content .basic .addNumber{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(187,187,187,1);
+    line-height: 14px;
+    padding-left:94px;
+    margin-top:10px;
+}
+.center .aside_right .layui-tab-content .basic .dayNumber{
+    width:596px;
+    font-family:SourceHanSansCN-Regular;
+    height:40px;
+    display: flex;
+    margin-top:20px;
+    justify-content:space-between;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .dayNumber .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .basic .dayNumber h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+}
+.center .aside_right .layui-tab-content .basic .dayNumber input{
+    width:500px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+}
+.center .aside_right .layui-tab-content .basic .addDayNumber{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(187,187,187,1);
+    line-height: 14px;
+    padding-left:94px;
+    margin-top:10px;
+}
+.center .aside_right .layui-tab-content .basic .upperLimit{
+    width:596px;
+    height:40px;
+    display: flex;
+    margin-top:20px;
+    align-items:center; 
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .upperLimit .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .basic .upperLimit h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+}
+.center .aside_right .layui-tab-content .basic .upperLimit .layui-form{
+    margin-left:10px;
+    padding:0;
+    height:40px;
+    margin-right:20px;
+}
+.center .aside_right .layui-tab-content .basic .upperLimit .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .basic .upperLimit .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .basic .upperLimit .num{
+    height:100%;
+    display: flex;
+    align-items:center;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.center .aside_right .layui-tab-content .basic .upperLimit .num em{
+    width:120px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    display: flex;
+    height:40px;
+    margin-right:10px;
+}
+.center .aside_right .layui-tab-content .basic .addupperLimit{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(187,187,187,1);
+    line-height: 14px;
+    padding-left:94px;
+    margin-top:10px;
+}
+.center .aside_right .layui-tab-content .basic .invite{
+    height:40px;
+    display: flex;
+    margin-top:20px;
+    align-items:center; 
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .invite .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .basic .invite h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+}
+.center .aside_right .layui-tab-content .basic .invite .layui-form{
+    margin-left:38px;
+    padding:0;
+    height:40px;
+    margin-right:20px;
+}
+.center .aside_right .layui-tab-content .basic .invite .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .basic .invite .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .basic .invite .people{
+    height:100%;
+    display: flex;
+    align-items:center;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.center .aside_right .layui-tab-content .basic .invite .people em{
+    width:63px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    display: flex;
+    height:40px;
+    margin-right:10px;
+    margin-left:9px;
+}
+.center .aside_right .layui-tab-content .basic .tallest{
+    width:596px;
+    height:40px;
+    display: flex;
+    margin-top:20px;
+    align-items:center; 
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .tallest .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .basic .tallest h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+}
+.center .aside_right .layui-tab-content .basic .tallest .layui-form{
+    margin-left:10px;
+    padding:0;
+    height:40px;
+    margin-right:20px;
+}
+.center .aside_right .layui-tab-content .basic .tallest .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .basic .tallest .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .basic .tallest .num{
+    height:100%;
+    display: flex;
+    align-items:center;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.center .aside_right .layui-tab-content .basic .tallest .num em{
+    width:120px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    display: flex;
+    height:40px;
+    margin-right:10px;
+}
+.center .aside_right .layui-tab-content .basic .addTallest{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(187,187,187,1);
+    line-height: 14px;
+    padding-left:94px;
+    margin-top:10px;
+}
+.center .aside_right .layui-tab-content .basic h1{
+    height:18px;
+    font-size:18px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height: 18px;
+    margin-top:49px;
+}
+.center .aside_right .layui-tab-content .basic .isOpen{
+    width:596px;
+    height:40px;
+    display: flex;
+    margin-top:40px;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .isOpen .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .basic .isOpen h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+}
+.center .aside_right .layui-tab-content .basic .isOpen .layui-form{
+    margin-left:38px;
+    padding:0;
+    height:40px;
+    margin-right:20px;
+}
+.center .aside_right .layui-tab-content .basic .isOpen .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .basic .isOpen .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .basic .isOpen .num{
+    height:100%;
+    display: flex;
+    align-items:center;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.center .aside_right .layui-tab-content .basic .isOpen .num em{
+    width:120px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    display: flex;
+    height:40px;
+    margin-right:10px;
+}
+.center .aside_right .layui-tab-content .basic .isOpen2{
+    width:596px;
+    height:40px;
+    display: flex;
+    margin-top:30px;
+    align-items:center; 
+    position: relative;
+}
+.center .aside_right .layui-tab-content .basic .isOpen2 .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .basic .isOpen2 h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+}
+.center .aside_right .layui-tab-content .basic .isOpen2 .layui-form{
+    margin-left:38px;
+    padding:0;
+    height:40px;
+    margin-right:20px;
+}
+.center .aside_right .layui-tab-content .basic .isOpen2 .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .basic .isOpen2 .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .basic .config{
+    width:500px;
+    height:40px;
+    margin-left:96px;
+    margin-top:20px;
+    display: flex;
+    justify-content: space-between;
+}
+.center .aside_right .layui-tab-content .basic .config .left{
+    width:360px;
+    height:40px;
+    background:rgba(247,247,247,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    display: flex;
+}
+.center .aside_right .layui-tab-content .basic .config .btn{
+    width:120px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(75,115,255,1);
+    border-radius:4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(75,115,255,1); 
+}
+/* 奖项设置页面 */
+.center .aside_right .layui-tab-content .reward{
+    /* background: yellow; */
+    padding-bottom: 30px;
+}
+.center .aside_right .layui-tab-content .reward .list{
+    width:530px;
+    height:120px;
+}
+.center .aside_right .layui-tab-content .reward .list li{
+    width:110px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    float:left;
+    margin-right:20px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom:20px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    position: relative;
+}
+.center .aside_right .layui-tab-content .reward .list span{
+    display: block;
+    width:17px;
+    height:17px;
+    background: #FF4B4B;
+    border-radius:50%;
+    color:#fff;
+    line-height: 17px;
+    font-size:12px;
+    position:absolute;
+    right:-8px;
+    top:-8px;
+    cursor:default;
+}
+.center .aside_right .layui-tab-content .reward .list .active{
+    background: #4B73FF;
+    border:1px solid #4B73FF;
+}
+.center .aside_right .layui-tab-content .reward .list .active a{
+    color:#fff;
+}
+.center .aside_right .layui-tab-content .reward .list p{
+    width:110px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(75,115,255,1);
+    border-radius:4px;
+    float:left;
+    text-align: center;
+    line-height: 40px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(75,115,255,1);
+    cursor: default;
+}
+.center .aside_right .layui-tab-content .reward h3{
+    height:18px;
+    font-size:18px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height: 18px;
+    margin-top:30px;
+}
+.center .aside_right .layui-tab-content .reward .name{
+    width:596px;
+    height:40px;
+    margin-top:40px;
+    display: flex; 
+    align-items:center;
+    justify-content: space-between;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .reward .name .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .reward .name p{
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .reward .name .Name{
+    width:500px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+}
+.center .aside_right .layui-tab-content .reward .type{
+    height:40px;
+    display: flex;
+    margin-top:30px;
+    align-items:center;
+}
+.center .aside_right .layui-tab-content .reward .type h3{
+    height:40px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .reward .type .layui-form{
+    padding:0;
+    height:40px;
+    margin-left:38px;
+}
+.center .aside_right .layui-tab-content .reward .type .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .reward .type .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .reward .kong{
+    width:500px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border-radius:4px;
+    margin-top:10px;
+    margin-left:96px;
+}
+.center .aside_right .layui-tab-content .reward .kong .layui-form .layui-form-item .layui-input-block{
+    margin-left:0;
+    color:#333;
+}
+.center .aside_right .layui-tab-content .reward .pic{
+    margin-top:20px;
+    display: flex;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .reward .pic .icon{
+    position:absolute;
+    left:-10px;
+    top:18px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .reward .pic h3{
+    margin-top:13px;
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height: 14px;
+}
+.center .aside_right .layui-tab-content .reward .pic .img{
+    width:120px;
+    height:120px;
+    background:rgba(255,255,255,1);
+    border:1px dashed rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center .aside_right .layui-tab-content .reward .pic .img span{
+    font-size:50px;
+    color:#ddd;
+}
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1553246324235'); /* IE9 */
+    src: url('iconfont.eot?t=1553246324235#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKEAAsAAAAABlQAAAI3AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApcaAE2AiQDCAsGAAQgBYRtBzEbjwXILrBteJMiuFgb7hBg+rQDAD4iiNbK6pk5RPUYZAmoAVV0WJK9SAQnI0w0kEYjdv+XLl1b2DzfLavWVNPezL+xc2mB53EapbA4EI4EjN3NveT63Nad84l7p38UUCDzAeUyxqCxJk3qAuqiCRTQ3hhF1mdsGLvAJbwm0Lair3B6e75BXWFtCsQdzzGgngsqCss0hXrNySJeqmmmR+kT8CJkPv6bRpOkllk1565tbJj/ZudkFVd9QoiAzteQsQsoxKXa5BklwTgl7WTZBrCvyuC3qvIdYq9Wwf46q7wLlqDsnuSu4lYzCW5L1sewClX/YdaSdn74/vFbqetxF+86vcR98iFyT1zF4NHeff5pPb4VqFY8IXjwqwda7/DNzrQDX0/CNdWiyAs09+MK/oe8Z0fRlZY9FVVe25ssnaeurY0K9o79jTXNTp4NTbMR7oblFFnTJrKwd6Gm4xDqmo6hbafd+Y4JVhKlhR0+AcLQF5K+j8iGvsnC/kXN3D/qhpHRdiUmN3ZsiZvNU0yGkI3mB3pWEivHKc2o8kLOMzQ4qwy5D+Lci+Bkz75iZkcx8Rx78pczFVGoOIlwC96jMEww5cQnS4auSDob7b1W96WhlUTQdAojBkFsyPQBeSyJmPL7i2bp9xfE8RQycEtbTfSBsJw3PZoYGvcgd7q4V9u9fJJ7cUwJoSCFJSJoC5aRUCiB0vplPmIRQ+6IeGpmZHdTfXXD9Q3R152ANsucwq7JGnc9I/ZdKwAAAAA=') format('woff2'),
+    url('iconfont.woff?t=1553246324235') format('woff'),
+    url('iconfont.ttf?t=1553246324235') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('iconfont.svg?t=1553246324235#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-tianjia:before {
+    content: "\e7db";
+}
+.center .aside_right .layui-tab-content .reward .rewardNum{
+    height:40px;
+    display: flex;
+    margin-top:20px;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .reward .rewardNum .icon{
+    position:absolute;
+    left:-10px;
+    top:18px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .reward .rewardNum h3{
+    height:40px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height: 14px;
+}
+.center .aside_right .layui-tab-content .reward .rewardNum .num{
+    width:500px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:38px;
+}
+.center .aside_right .layui-tab-content .reward .rewardNum2{
+    height:40px;
+    display: flex;
+    margin-top:20px;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .reward .rewardNum2 .icon{
+    position:absolute;
+    left:-10px;
+    top:18px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .reward .rewardNum2 h3{
+    height:40px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:14px;
+}
+.center .aside_right .layui-tab-content .reward .rewardNum2 .num{
+    width:120px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:38px;
+    margin-right:10px;
+}
+.center .aside_right .layui-tab-content .reward h2{
+    height:18px;
+    font-size:18px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height: 18px;
+    margin-top:50px;
+}
+.center .aside_right .layui-tab-content .reward .type2{
+    height:40px;
+    display: flex;
+    margin-top:20px;
+    align-items:center;
+}
+.center .aside_right .layui-tab-content .reward .type2 h3{
+    height:40px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .reward .type2 .layui-form{
+    padding:0;
+    height:40px;
+    margin-left:12px;
+}
+.center .aside_right .layui-tab-content .reward .type2 .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .reward .type2 .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .reward .gift{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    line-height: 14px;
+    margin-left:106px;
+}
+.center .aside_right .layui-tab-content .reward .help{
+    height:40px;
+    margin-top:24px;
+    display: flex;
+    align-items: center;
+}
+.center .aside_right .layui-tab-content .reward .help h3{
+    height:40px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .reward .help .prize{
+    margin-left:38px;
+    display: flex;
+    align-items:center;
+}
+.center .aside_right .layui-tab-content .reward .help .prize .layui-form-item{
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .reward .help .prize .layui-input-block{
+    margin-left:13px;
+    margin-right:12px;
+    padding-right:0;
+    width:90px;
+}
+.center .aside_right .layui-tab-content .reward .help .prize .em2{
+    width:120px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:12px;
+    margin-right:10px;
+}
+.center .aside_right .layui-tab-content .reward .activity_name{
+    display: flex;
+    margin-top:20px;
+    height:120px;
+    overflow: hidden;
+}
+.center .aside_right .layui-tab-content .reward .activity_name h3{
+    height:120px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    margin-top:13px;
+}
+.center .aside_right .layui-tab-content .reward .activity_name textarea{
+    width:500px;
+    height:118px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:38px;
+    display: flex;
+}
+/* 高级设置 */
+.center .aside_right .layui-tab-content .advance{
+    /* background: pink; */
+}
+.center .aside_right .layui-tab-content .advance h3{
+    height:18px;
+    font-size:18px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height: 18px;
+}
+.center .aside_right .layui-tab-content .advance .share{
+    height:40px;
+    margin-top:40px;
+    display: flex;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .advance .share .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .advance .share h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .advance .share .share_content{
+    width:500px;
+    height:38px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:40px;
+}
+.center .aside_right .layui-tab-content .advance h2{
+    height:18px;
+    font-size:18px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height: 18px;
+    margin-top:50px;
+}
+.center .aside_right .layui-tab-content .advance  .blackName{
+    height:40px;
+    margin-top:50px;
+    display: flex;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .advance .blackName .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .advance  .blackName h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .advance  .blackName .layui-form{
+    height:40px;
+    margin-left:28px;
+}
+.center .aside_right .layui-tab-content .advance  .blackName .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .advance  .blackName .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .advance  .limiting{
+    height:40px;
+    margin-top:30px;
+    display: flex;
+    align-items:center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .advance .limiting .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .advance  .limiting h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .advance  .limiting .layui-form{
+    height:40px;
+    margin-left:14px;
+}
+.center .aside_right .layui-tab-content .advance  .limiting .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .advance  .limiting .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .advance .firstScreen{
+    height:40px;
+    display:flex;
+    align-items:center;
+    color:#7D7D7D;
+    margin-top:20px;
+}
+.center .aside_right .layui-tab-content .advance .firstScreen em{
+    width:120px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:12px;
+    margin-right:10px;
+}
+.center .aside_right .layui-tab-content .advance .program{
+    height:40px;
+    margin-top:20px;
+    display: flex;
+    align-items:center;
+}
+.center .aside_right .layui-tab-content .advance .program h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .advance  .program .layui-form{
+    height:40px;
+    margin-left:14px;
+}
+.center .aside_right .layui-tab-content .advance  .program .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .advance  .program .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .advance  .program .num{
+    height:40px;
+    display: flex;
+    margin-left:20px;
+    align-items: center;
+}
+.center .aside_right .layui-tab-content .advance  .program .num em{
+    width:120px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-right:10px;
+    display: flex;
+}
+.center .aside_right .layui-tab-content .advance .app{
+    height:40px;
+    display: flex;
+    align-items: center;
+    margin-top:20px;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .advance .app .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .advance .app h3{
+    height:16px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .advance .app .appID{
+    width:500px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:12px;
+}
+.center .aside_right .layui-tab-content .advance h1{
+    height:18px;
+    font-size:18px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    margin-top:50px;
+    line-height: 18px;
+}
+.center .aside_right .layui-tab-content .advance .isopen{
+    height:40px;
+    margin-top:50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .advance .isopen .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .advance .isopen h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+}
+.center .aside_right .layui-tab-content .advance  .isopen .layui-form{
+    height:40px;
+    margin-left:44px;
+}
+.center .aside_right .layui-tab-content .advance  .isopen .layui-form .layui-form-item{
+    height:100%;
+    margin-bottom:0;
+}
+.center .aside_right .layui-tab-content .advance  .isopen .layui-form .layui-form-item .layui-input-block{
+    margin-left:13px;
+}
+.center .aside_right .layui-tab-content .advance .ranking{
+    height:40px;
+    display: flex;
+    align-items: center;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    margin-top:30px;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .advance .ranking .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .advance .ranking em{
+    width:120px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:12px;
+    margin-right:9px;
+}
+.center .aside_right .layui-tab-content .advance .on{
+    height:40px;
+    display: flex;
+    align-items: center;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    margin-top:20px;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .advance .on .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .advance .on em{
+    width:120px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:12px;
+    margin-right:9px;
+}
+.center .aside_right .layui-tab-content .advance .last{
+    margin-top:20px;
+    display:flex;
+    position: relative;
+}
+.center .aside_right .layui-tab-content .advance .last .icon{
+    position:absolute;
+    left:-10px;
+    display: block;
+    width:6px;
+    height:6px;
+    top:18px;
+    background: url('../../images/star.png') no-repeat;
+}
+.center .aside_right .layui-tab-content .advance .last h3{
+    height:14px;
+    font-size:14px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    padding-top:13px;
+}
+.center .aside_right .layui-tab-content .advance .last .square{
+    width:120px;
+    height:120px;
+    background:rgba(255,255,255,1);
+    border:1px dashed rgba(221,221,221,1);
+    border-radius:4px;
+    margin-left:26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.center .aside_right .layui-tab-content .advance .last .square span{
+    font-size:50px;
+    color:#ddd;
+}

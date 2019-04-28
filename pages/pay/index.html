@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>在线支付</title>
+		<link rel="stylesheet" href="../../css/plugin/reset.css">
+		<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+		<script src="../../js/plugin/layui/layui.js"></script>
+		<script src="../../js/lib/jquery.min.js"></script>
+		<link rel="stylesheet"  href="../../css/pay/pay.css"/>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<div class="header">
+			<script type="text/javascript">
+				$(".header").load("../common/header.html");
+			</script>
+		</div>
+		<!--在线支付-->
+		<div class="warp">
+			<div class="title">在线支付</div>
+			<div class="content">
+				<div class="col">
+					<label>商品详情</label>
+					<span>爱奇艺黄金会员（月卡）</span>
+				</div>
+				<div class="col">
+					<label>订单号</label>
+					<span>222354545656453453</span>
+				</div>
+				<div class="col">
+					<label>收款方</label>
+					<span>北京xxxxx公司</span>
+				</div>
+			</div>
+			<!--二维码-->
+			<div class="code">
+				<div>待支付：<span>500</span>元</div>
+				<div>
+					<img src="https://img-gamebox.vdongchina.com/activity/jigsaw/20190322/137851f669ff2efeed1c1e0302618230.png">
+					<p>使用【微信扫一扫】即可付款</p>
+				</div>
+				<div>温馨提示：如果支付成功，此页面没有跳转，请到订单中心查看处理情况</div>
+			</div>
+		</div>
+	</body>
+</html>

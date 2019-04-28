@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../../css/plugin/reset.css">
+		<link rel="stylesheet" href="../../css/viewData.css">
+		<link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/plugin/layui/layui.js"></script>
+		<script type="text/javascript" src="../../js/plugin/echarts.min.js"></script>
+		<title>查看数据</title>
+	</head>
+
+	<body>
+		<!-- 头部 -->
+		<!-- 导航 start -->
+		<div class="header">
+			<script type="text/javascript">
+				$(".header").load("../common/header.html");
+			</script>
+		</div>
+		<!--主体-->
+		<div class="viewData">
+			<!--tou-->
+			<div class="view_nav_box conter1200">
+				<div class="view_nav">
+					<p class="view_nav_top">哈哈</p>
+					<p class="view_nav_bott">kk</p>
+				</div>
+				<ul class="view_nav_list">
+					<li>
+						<img src="" />
+					</li>
+					<li>
+						<p class="view_nav_list_num">2</p>
+						<p class="view_nav_list_text">新用户数</p>
+					</li>
+					<li>
+						<p class="view_nav_list_num">3</p>
+						<p class="view_nav_list_text">访客人数</p>
+					</li>
+					<li>
+						<p class="view_nav_list_num">3</p>
+						<p class="view_nav_list_text">访问次数</p>
+					</li>
+					<li>
+						<p class="view_nav_list_num">3</p>
+						<p class="view_nav_list_text">打开次数</p>
+					</li>
+					<li>
+						<p class="view_nav_list_num">3</p>
+						<p class="view_nav_list_text">次均停留时长</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--图表-->
+		<div class="chart conter1200">
+			<ul class="chart-ul">
+				<li class="chart-ul-color">今天</li>
+				<li>昨天</li>
+				<li>近7天</li>
+				<li class="chart-ul-li">近30天</li>
+			</ul>
+
+			<!--日期-->
+			<div class="layui-form">
+				<div class="layui-form-item">
+					<div class="layui-inline">
+						<img src="" />
+						<input type="text" class="layui-input test-item" placeholder="2018/11/01">
+					</div>
+					<div class="layui-form-cen">
+						-
+					</div>
+					<div class="layui-inline">
+						<img src="" />
+						<input type="text" class="layui-input test-item" placeholder="2018/11/01">
+					</div>
+				</div>
+			</div>
+			<!--日期end-->
+		</div>
+
+		<!--多选-->
+		<div class="layui-form layui-form-pane conter1200">
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<select name="city" lay-filter="city">
+						<option value=""></option>
+						<option value="0">北京</option>
+						<option value="1">上海</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<!--图表end-->
+		<div id="main" class="line_box" style="width:1310px, height: 400px"></div>
+		<!--主体end-->
+		<!-- 底部 -->
+		<div class="footer">
+			<script type="text/javascript">
+				$(".footer").load("../common/footer.html");
+			</script>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/formSelects.js"></script>
+	<script>
+		layui.use('laydate', function() {
+			var laydate = layui.laydate;
+
+			//常规用法
+			laydate.render({
+				elem: '#test1'
+			});
+
+			//国际版
+			laydate.render({
+				elem: '#test1-1',
+				lang: 'en'
+			});
+
+			//年选择器
+			laydate.render({
+				elem: '#test2',
+				type: 'year'
+			});
+
+			//年月选择器
+			laydate.render({
+				elem: '#test3',
+				type: 'month'
+			});
+
+			//时间选择器
+			laydate.render({
+				elem: '#test4',
+				type: 'time'
+			});
+
+			//日期时间选择器
+			laydate.render({
+				elem: '#test5',
+				type: 'datetime'
+			});
+
+			//日期范围
+			laydate.render({
+				elem: '#test6',
+				range: true
+			});
+
+			//年范围
+			laydate.render({
+				elem: '#test7',
+				type: 'year',
+				range: true
+			});
+
+			//年月范围
+			laydate.render({
+				elem: '#test8',
+				type: 'month',
+				range: true
+			});
+
+			//时间范围
+			laydate.render({
+				elem: '#test9',
+				type: 'time',
+				range: true
+			});
+
+			//日期时间范围
+			laydate.render({
+				elem: '#test10',
+				type: 'datetime',
+				range: true
+			});
+
+			//自定义格式
+			laydate.render({
+				elem: '#test11',
+				format: 'yyyy年MM月dd日'
+			});
+			laydate.render({
+				elem: '#test12',
+				format: 'dd/MM/yyyy'
+			});
+			laydate.render({
+				elem: '#test13',
+				format: 'yyyyMMdd'
+			});
+			laydate.render({
+				elem: '#test14',
+				type: 'time',
+				format: 'H点m分'
+			});
+			laydate.render({
+				elem: '#test15',
+				type: 'month',
+				range: '~',
+				format: 'yyyy-MM'
+			});
+			laydate.render({
+				elem: '#test16',
+				type: 'datetime',
+				range: '到',
+				format: 'yyyy年M月d日H时m分s秒'
+			});
+
+			//开启公历节日
+			laydate.render({
+				elem: '#test17',
+				calendar: true
+			});
+
+			//限定可选日期
+			var ins22 = laydate.render({
+				elem: '#test-limit1',
+				min: '2016-10-14',
+				max: '2080-10-14',
+				ready: function() {
+					ins22.hint('日期可选值设定在 <br> 2016-10-14 到 2080-10-14');
+				}
+			});
+
+			//前后若干天可选，这里以7天为例
+			laydate.render({
+				elem: '#test-limit2',
+				min: -7,
+				max: 7
+			});
+
+			//限定可选时间
+			laydate.render({
+				elem: '#test-limit3',
+				type: 'time',
+				min: '09:30:00',
+				max: '17:30:00',
+				btns: ['clear', 'confirm']
+			});
+
+			//同时绑定多个
+			lay('.test-item').each(function() {
+				laydate.render({
+					elem: this,
+					trigger: 'click'
+				});
+			});
+
+			//初始赋值
+			laydate.render({
+				elem: '#test19',
+				value: '1989-10-14',
+				isInitValue: true
+			});
+
+			//选中后的回调
+			laydate.render({
+				elem: '#test20',
+				done: function(value, date) {
+					layer.alert('你选择的日期是：' + value + '<br>获得的对象是' + JSON.stringify(date));
+				}
+			});
+
+			//日期切换的回调
+			laydate.render({
+				elem: '#test21',
+				change: function(value, date) {
+					layer.msg('你选择的日期是：' + value + '<br><br>获得的对象是' + JSON.stringify(date));
+				}
+			});
+			//不出现底部栏
+			laydate.render({
+				elem: '#test22',
+				showBottom: false
+			});
+
+			//只出现确定按钮
+			laydate.render({
+				elem: '#test23',
+				btns: ['confirm']
+			});
+
+			//自定义事件
+			laydate.render({
+				elem: '#test24',
+				trigger: 'mousedown'
+			});
+
+			//点我触发
+			laydate.render({
+				elem: '#test25',
+				eventElem: '#test25-1',
+				trigger: 'click'
+			});
+
+			//双击我触发
+			lay('#test26-1').on('dblclick', function() {
+				laydate.render({
+					elem: '#test26',
+					show: true,
+					closeStop: '#test26-1'
+				});
+			});
+
+			//日期只读
+			laydate.render({
+				elem: '#test27',
+				trigger: 'click'
+			});
+
+			//非input元素
+			laydate.render({
+				elem: '#test28'
+			});
+
+			//墨绿主题
+			laydate.render({
+				elem: '#test29',
+				theme: 'molv'
+			});
+
+			//自定义颜色
+			laydate.render({
+				elem: '#test30',
+				theme: '#393D49'
+			});
+
+			//格子主题
+			laydate.render({
+				elem: '#test31',
+				theme: 'grid'
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		formSelects.on({
+			layFilter: 'city', //绑定select lay-filter
+			left: '【', //显示的符号left
+			right: '】', //显示的符号right
+			separator: '', //多选分隔符
+		});
+		//formSelects.arr 可以获取到已经选择的数据
+		function formatJson(arr) {
+			try {
+				$('#json-view').jsonViewer(eval('(' + JSON.stringify(arr) + ')'), {
+					collapsed: false,
+					withQuotes: true
+				});
+			} catch(error) {}
+		}
+	</script>
+
+	<!--图表-->
+	<script type="text/javascript">
+		var myChart = echarts.init(document.getElementById('main'));
+
+		// 指定图表的配置项和数据
+		var option = {
+			title: {
+
+			},
+			tooltip: {
+				backgroundColor: 'white',
+				axisPointer: {
+					type: 'cross',
+					label: {
+						backgroundColor: '#6a7985'
+					}
+				},
+				textStyle: {
+					color: 'black'
+				}
+			},
+			legend: {
+				data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+			},
+			toolbox: {
+				feature: {
+					saveAsImage: {}
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+
+			xAxis: [{
+				type: 'category',
+				boundaryGap: false,
+				splitLine: {
+					show: false,
+				},
+				axisLabel: {
+					show: true,
+					textStyle: {
+						color: '#333',
+					}
+				},
+				//设置轴线的属性
+				axisLine: {
+					lineStyle: {
+						color: '#DBDFE6',
+						width: 1, //这里是为了突出显示加上的
+					}
+				},
+				data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+			}],
+			yAxis: [{
+				type: 'value',
+				splitLine: {
+					show: true,
+					lineStyle: {
+						type: 'dashed'
+					}
+				},
+				axisLabel: {
+					formatter: '{value}',
+					textStyle: {
+						color: '#333'
+					}
+				},
+				axisLine: {
+					lineStyle: {
+						color: '#DBDFE6',
+						width: 1, //这里是为了突出显示加上的
+					}
+				},
+			}],
+			series: [{
+					name: '邮件营销',
+					type: 'line',
+					stack: '总量',
+					areaStyle: {},
+					data: [120, 132, 101, 134, 90, 230, 210]
+				},
+				{
+					name: '联盟广告',
+					type: 'line',
+					stack: '总量',
+					areaStyle: {},
+					data: [220, 182, 191, 234, 290, 330, 310]
+				},
+				{
+					name: '视频广告',
+					type: 'line',
+					stack: '总量',
+					areaStyle: {},
+					data: [150, 232, 201, 154, 190, 330, 410]
+				},
+				{
+					name: '直接访问',
+					type: 'line',
+					stack: '总量',
+					areaStyle: {
+						normal: {}
+					},
+					data: [320, 332, 301, 334, 390, 330, 320]
+				},
+				{
+					name: '搜索引擎',
+					type: 'line',
+					stack: '总量',
+					label: {
+						normal: {
+							show: true,
+							position: 'top'
+						}
+					},
+					areaStyle: {
+						normal: {}
+					},
+					data: [820, 932, 901, 934, 1290, 1330, 1320]
+				}
+			]
+		};
+
+		// 使用刚指定的配置项和数据显示图表。
+		myChart.setOption(option);
+	</script>
+	
+	<script type="text/javascript">
+		$('.chart-ul li').on('click', function () {
+			var index = $(this).index();
+			$('.chart-ul li').eq(index).addClass("chart-ul-color").siblings().removeClass("chart-ul-color");
+		})
+	</script>
+</html>

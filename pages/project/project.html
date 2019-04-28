@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/plugin/reset.css">
+    <link rel="stylesheet" href="../../css/project/project.css">
+    <link rel="stylesheet" href="../../css/plugin/iconfont2.css">
+    <link rel="stylesheet" href="../../js/plugin/layui/css/layui.css">
+    <script src="../../js/lib/jquery.min.js"></script>
+    <script src="../../js/plugin/layui/layui.js"></script>
+    <script type="text/javascript" src="../../js/formSelects.js"></script>
+    <title>项目设置</title>
+</head>
+<style>
+    .layui-input{
+        height:40px;
+    }
+    .layui-form-radio>i:hover,
+    .layui-form-radioed>i{
+        color:#4B73FF;
+    }
+    .layui-form-select dl dd.layui-this{
+        background: #4B73ff;
+    }
+</style>
+<body>
+    <div class="page-setting">
+        <div class="top">
+            <div class="left">logo</div>
+            <div class="right">
+                <span class="save">保存</span>
+                <span class="cancel">取消</span>
+            </div>
+        </div>
+        <div class="center">
+            <ul class="aside"> 
+                <li class="active">
+                    <span class="iconfont icon-guanggao"></span>
+                    <a href="##">首屏广告</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-home"></span>
+                    <a href="##">主页面</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-renwu"></span>
+                    <a href="##">任务页面</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-renwu"></span>
+                    <a href="##">中奖页(弹窗)</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-liwulipinjiangpin-xianxing"></span>
+                    <a href="##">奖品详情</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-fenxiang"></span>
+                    <a href="##">分享页面</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-ziyuan"></span>
+                    <a href="##">我的邀请</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-paihangbang--"></span>
+                    <a href="##">排行榜</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-paihangbang--"></span>
+                    <a href="##">授权(弹窗)</a>
+                </li>
+                <li>
+                    <span class="iconfont icon-wodehaoyou"></span>
+                    <a href="##">好友助力(弹窗)</a>
+                </li>
+            </ul>
+            <ul class="aside_right">
+                <div class="template">
+                    <img src="../../images/template.png" alt="">
+                    <span>模板效果展示</span>
+                </div>
+                <!-- tab选项卡 -->
+                <div class="layui-tab layui-tab-card">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">基础设置</li>
+                        <li>奖项设置</li>
+                        <li>高级设置</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show basic">
+                            <h3>活动设置</h3>
+                            <div class="activity">
+                                <i class="icon"></i>
+                                <h3>活动名称</h3>
+                                <input type="text">
+                            </div>
+                            <div class="time">
+                                <i class="icon"></i>
+                                <h3>活动时间</h3>
+                                <!--日期-->
+                                <div class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-inline">
+                                            <img src="" />
+                                            <input type="text" class="layui-input test-item" placeholder="开始日期">
+                                        </div>
+                                        <div class="layui-form-cen">-</div>
+                                        <div class="layui-inline">
+                                            <img src="" />
+                                            <input type="text" class="layui-input test-item" placeholder="结束日期">
+                                        </div>
+                                    </div>
+                                </div>
+                               <!--日期end-->
+                               <span class="notice">活动上线但未到开始时间,显示活动未开始;进入活动小程序但时间已经结束,显示活动已结束</span>
+                            </div>
+                            <div class="name">
+                                <i class="icon"></i>
+                                <h3>活动规则</h3>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <h2>抽奖次数</h2>
+                            <div class="number">
+                                <i class="icon"></i>
+                                <h3>授权的次数</h3>
+                                <input type="text">
+                            </div>
+                            <div class="addNumber">新用户收授权可获得几次抽奖次数</div>
+                            <div class="dayNumber">
+                                <i class="icon"></i>
+                                <h3>每日送次数</h3>
+                                <input type="text">
+                            </div>
+                            <div class="addDayNumber">每日进入小程序获得几次抽奖机会</div>
+                            <div class="upperLimit">
+                                <i class="icon"></i>
+                                <h3>抽奖次数上限</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                      <div class="layui-input-block">
+                                        <input type="radio" name="sex" value="0" title="开启">
+                                        <input type="radio" name="sex" value="1" title="关闭" checked>
+                                      </div>
+                                    </div>
+                                </form>
+                                <div class="num"><em></em>次</div>
+                            </div>
+                            <div class="addupperLimit">开启后设置用户在活动持续时间内做多可获得多少抽奖机会</div>
+                            <div class="invite">
+                                <i class="icon"></i>
+                                <h3>邀请助力</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                          <input type="radio" name="sex" value="0" title="开启">
+                                          <input type="radio" name="sex" value="1" title="关闭" checked>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="people">邀请<em></em>人获得<em></em>次抽奖机会</div>
+                            </div>
+                            <div class="tallest">
+                                    <i class="icon"></i>
+                                    <h3>每日最高获得</h3>
+                                    <form class="layui-form">
+                                        <div class="layui-form-item">
+                                          <div class="layui-input-block">
+                                            <input type="radio" name="sex" value="0" title="开启">
+                                            <input type="radio" name="sex" value="1" title="关闭" checked>
+                                          </div>
+                                        </div>
+                                    </form>
+                                    <div class="num"><em></em>次</div>
+                            </div>
+                            <div class="addTallest">通过邀请助力每日最多获得几次抽奖机</div>
+                            <h1>中奖展示</h1>
+                            <div class="isOpen">
+                                <i class="icon"></i>
+                                <h3>是否开启</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="sex" value="0" title="开启">
+                                            <input type="radio" name="sex" value="1" title="关闭" checked>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="num"><em></em>次</div>
+                            </div>
+                            <div class="isOpen2">
+                                    <i class="icon"></i>
+                                    <h3>是否开启</h3>
+                                    <form class="layui-form">
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+                                                <input type="radio" name="sex" value="0" title="真实中奖信息">
+                                                <input type="radio" name="sex" value="1" title="真实中奖信息混合配置信息" checked>
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
+                            <div class="config">
+                                <div class="left"></div>
+                                <div class="btn">上传配置</div>
+                            </div>
+                        </div>
+                        <div class="layui-tab-item reward">
+                            <ul class="list">
+                                <li><a href="##">奖项1</a><span>X</span></li>
+                                <li><a href="##">奖项2</a><span>X</span></li>
+                                <li><a href="##">奖项3</a><span>X</span></li>
+                                <li><a href="##">奖项4</a><span>X</span></li>
+                                <li class="active"><a href="##">奖项5</a><span>X</span></li>
+                                <li><a href="##">奖项6</a><span>X</span></li>
+                                <p>添加</p>
+                            </ul>
+                            <h3>奖项设置</h3>
+                            <div class="name">
+                                <i class="icon"></i>
+                                <p>奖品名称</p>
+                                <div class="Name"></div>
+                            </div>
+                            <div class="type">
+                                <h3>奖品类型</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="sex" value="0" title="礼品中心">
+                                            <input type="radio" name="sex" value="1" title="礼橙积分" checked>
+                                            <input type="radio" name="sex" value="2" title="自定奖品">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="kong">
+                                <form class="layui-form" action="">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <select name="city" lay-verify="required">
+                                                <option value="0">Apple iPhone XR (A2108) 128GB 黑色 移动联通电信4G手机 双卡双待</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                   </div>
+                                </form>
+                            </div>
+                            <div class="pic">
+                                <i class="icon"></i>
+                                <h3>奖品图片</h3>
+                                <div class="img"><span class="iconfont icon-tianjia"></span></div>
+                            </div>
+                            <div class="rewardNum">
+                                <i class="icon"></i>
+                                <h3>奖品数量</h3>
+                                <div class="num"></div>
+                            </div>
+                            <div class="rewardNum2">
+                                <i class="icon"></i>
+                                <h3>奖品数量</h3>
+                                <div class="num"></div>
+                                <span>%</span>
+                            </div>
+                            <h2>兑换设置</h2>
+                            <!-- <div class="type2">
+                                <h3>每日最高获得</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="sex" value="0" title="魔力橙">
+                                            <input type="radio" name="sex" value="1" title="公众号" checked>
+                                            <input type="radio" name="sex" value="2" title="微信群">
+                                            <input type="radio" name="sex" value="2" title="线下">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div> -->
+                            <!-- <i class="gift">(奖品类型为礼品中心时,只可以选择魔力橙)</i> -->
+                            <div class="help">
+                                <h3>兑换时间</h3>
+                                <div class="prize">中奖
+                                        <form class="layui-form" action="">
+                                                <div class="layui-form-item">
+                                                    <div class="layui-input-block">
+                                                        <select name="city" lay-verify="required">
+                                                            <option value="0">当天</option>
+                                                            <option value="1">第二天</option>
+                                                            <option value="2">第三天</option>
+                                                        </select>
+                                                    </div>
+                                               </div>
+                                            </form>
+                                可以领取,兑换有效期<em class="em2"></em>天</div>
+                            </div>
+                            <!-- <div class="activity_name">
+                                <h3>活动名称</h3>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div> -->
+                        </div>
+                        <div class="layui-tab-item advance">
+                            <h3>分享设置</h3>
+                            <div class="share"> 
+                                <i class="icon"></i>
+                                <h3>分享内容</h3>
+                                <div class="share_content"></div>
+                            </div>
+                            <h2>推广设置</h2>
+                            <div class="blackName">
+                                <i class="icon"></i>
+                                <h3>开启黑名单</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="sex" value="0" title="开启">
+                                            <input type="radio" name="sex" value="1" title="关闭" checked>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="limiting">
+                                <i class="icon"></i>
+                                <h3>参与人数限制</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="sex" value="0" title="开启">
+                                            <input type="radio" name="sex" value="1" title="关闭" checked>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="firstScreen">首屏广告时长<em></em>秒</div>
+                            <div class="program">
+                                <h3>打开程序送次</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="sex" value="0" title="开启">
+                                            <input type="radio" name="sex" value="1" title="关闭" checked>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="num"><em></em>次</div>
+                            </div>
+                            <div class="app">
+                                <i class="icon"></i>
+                                <h3>小程序AppID</h3>
+                                <div class="appID"></div>
+                            </div>
+                            <h1>助力排行榜</h1>
+                            <div class="isopen">
+                                <i class="icon"></i>
+                                <h3>是否开启</h3>
+                                <form class="layui-form">
+                                    <div class="layui-form-item">
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="sex" value="0" title="开启">
+                                            <input type="radio" name="sex" value="1" title="关闭" checked>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="ranking"><i class="icon"></i>排行榜显示前<em></em>名参与用户</div>
+                            <div class="on"><i class="icon"></i>排行榜显示前<em></em>关闭</div>
+                            <div class="last">
+                                <i class="icon"></i>
+                                <h3>排行榜奖励</h3>
+                                <div class="square"><span class="iconfont icon-tianjia"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // 左侧导航切换active类
+    $('.aside li').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+    //tab选项卡
+    layui.use('element', function(){
+      var element = layui.element;
+    });
+    //form表单单选按钮
+    layui.use('form', function(){
+      var form = layui.form;
+    });
+    //奖项设置tab切换
+    $('.reward .list li').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+    $('.reward .list li span').on('click',function(){
+        $(this).parent().remove();
+    })
+
+
+    //日期选择插件
+    layui.use('laydate', function() {
+	    var laydate = layui.laydate;
+
+			//常规用法
+			laydate.render({
+				elem: '#test1'
+			});
+
+			//国际版
+			laydate.render({
+				elem: '#test1-1',
+				lang: 'en'
+			});
+
+			//年选择器
+			laydate.render({
+				elem: '#test2',
+				type: 'year'
+			});
+
+			//年月选择器
+			laydate.render({
+				elem: '#test3',
+				type: 'month'
+			});
+
+			//时间选择器
+			laydate.render({
+				elem: '#test4',
+				type: 'time'
+			});
+
+			//日期时间选择器
+			laydate.render({
+				elem: '#test5',
+				type: 'datetime'
+			});
+
+			//日期范围
+			laydate.render({
+				elem: '#test6',
+				range: true
+			});
+
+			//年范围
+			laydate.render({
+				elem: '#test7',
+				type: 'year',
+				range: true
+			});
+
+			//年月范围
+			laydate.render({
+				elem: '#test8',
+				type: 'month',
+				range: true
+			});
+
+			//时间范围
+			laydate.render({
+				elem: '#test9',
+				type: 'time',
+				range: true
+			});
+
+			//日期时间范围
+			laydate.render({
+				elem: '#test10',
+				type: 'datetime',
+				range: true
+			});
+
+			//自定义格式
+			laydate.render({
+				elem: '#test11',
+				format: 'yyyy年MM月dd日'
+			});
+			laydate.render({
+				elem: '#test12',
+				format: 'dd/MM/yyyy'
+			});
+			laydate.render({
+				elem: '#test13',
+				format: 'yyyyMMdd'
+			});
+			laydate.render({
+				elem: '#test14',
+				type: 'time',
+				format: 'H点m分'
+			});
+			laydate.render({
+				elem: '#test15',
+				type: 'month',
+				range: '~',
+				format: 'yyyy-MM'
+			});
+			laydate.render({
+				elem: '#test16',
+				type: 'datetime',
+				range: '到',
+				format: 'yyyy年M月d日H时m分s秒'
+			});
+
+			//开启公历节日
+			laydate.render({
+				elem: '#test17',
+				calendar: true
+			});
+
+			//限定可选日期
+			var ins22 = laydate.render({
+				elem: '#test-limit1',
+				min: '2016-10-14',
+				max: '2080-10-14',
+				ready: function() {
+					ins22.hint('日期可选值设定在 <br> 2016-10-14 到 2080-10-14');
+				}
+			});
+
+			//前后若干天可选，这里以7天为例
+			laydate.render({
+				elem: '#test-limit2',
+				min: -7,
+				max: 7
+			});
+
+			//限定可选时间
+			laydate.render({
+				elem: '#test-limit3',
+				type: 'time',
+				min: '09:30:00',
+				max: '17:30:00',
+				btns: ['clear', 'confirm']
+			});
+
+			//同时绑定多个
+			lay('.test-item').each(function() {
+				laydate.render({
+					elem: this,
+					trigger: 'click'
+				});
+			});
+
+			//初始赋值
+			laydate.render({
+				elem: '#test19',
+				value: '1989-10-14',
+				isInitValue: true
+			});
+
+			//选中后的回调
+			laydate.render({
+				elem: '#test20',
+				done: function(value, date) {
+					layer.alert('你选择的日期是：' + value + '<br>获得的对象是' + JSON.stringify(date));
+				}
+			});
+
+			//日期切换的回调
+			laydate.render({
+				elem: '#test21',
+				change: function(value, date) {
+					layer.msg('你选择的日期是：' + value + '<br><br>获得的对象是' + JSON.stringify(date));
+				}
+			});
+			//不出现底部栏
+			laydate.render({
+				elem: '#test22',
+				showBottom: false
+			});
+
+			//只出现确定按钮
+			laydate.render({
+				elem: '#test23',
+				btns: ['confirm']
+			});
+
+			//自定义事件
+			laydate.render({
+				elem: '#test24',
+				trigger: 'mousedown'
+			});
+
+			//点我触发
+			laydate.render({
+				elem: '#test25',
+				eventElem: '#test25-1',
+				trigger: 'click'
+			});
+
+			//双击我触发
+			lay('#test26-1').on('dblclick', function() {
+				laydate.render({
+					elem: '#test26',
+					show: true,
+					closeStop: '#test26-1'
+				});
+			});
+
+			//日期只读
+			laydate.render({
+				elem: '#test27',
+				trigger: 'click'
+			});
+
+			//非input元素
+			laydate.render({
+				elem: '#test28'
+			});
+
+			//墨绿主题
+			laydate.render({
+				elem: '#test29',
+				theme: 'molv'
+			});
+
+			//自定义颜色
+			laydate.render({
+				elem: '#test30',
+				theme: '#393D49'
+			});
+
+			//格子主题
+			laydate.render({
+				elem: '#test31',
+				theme: 'grid'
+			});
+	});
+</script>
+<script type="text/javascript">
+    formSelects.on({
+        layFilter: 'city', //绑定select lay-filter
+        left: '【', //显示的符号left
+        right: '】', //显示的符号right
+        separator: '', //多选分隔符
+    });
+    //formSelects.arr 可以获取到已经选择的数据
+    function formatJson(arr) {
+        try {
+            $('#json-view').jsonViewer(eval('(' + JSON.stringify(arr) + ')'), {
+                collapsed: false,
+                withQuotes: true
+            });
+        } catch(error) {}
+    }
+</script>
+
